@@ -3,7 +3,7 @@ layout: post
 title: "ベクトル・行列の微分計算の基本"
 categories: note
 description: 高次元配列に関する微分計算についてまとめます．
-tags:
+tags: knowledge
 katex: true
 ---
 
