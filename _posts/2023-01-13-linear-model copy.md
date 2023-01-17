@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "線形回帰モデルの基本"
+title: "線形回帰モデル"
 categories: note
 description: 線形回帰モデルの尤度関数を導出します．
 tags:
