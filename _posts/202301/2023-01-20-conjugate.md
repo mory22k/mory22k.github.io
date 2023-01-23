@@ -208,7 +208,7 @@ $$
 $$
 \begin{gathered}
     & p(\bm w | \bm X, \bm y)
-    = \mathcal N(\bm w | \bm m_{d}, \bm V_{d})
+    = \mathcal N_d(\bm w | \bm m_{d}, \bm V_{d})
     \\
     \text{where} & \left\{ \begin{aligned}
         \bm m_{d} &\coloneqq \bm V_{d} \bm X^\mathsf{T} \bm y \\

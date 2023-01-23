@@ -38,8 +38,18 @@ figure.center {
     display: grid;
     place-items: center;
     text-align: center;
+    margin: 1em 0;
+
+    img{
+        margin: 1em 0;
+    }
 }
 
 .red {
     color: var(--red);
+}
+
+u {
+    text-decoration: none;
+    background: linear-gradient(transparent 85%, var(--gray) 0%);
 }
