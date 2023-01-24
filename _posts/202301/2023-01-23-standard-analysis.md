@@ -37,9 +37,9 @@ $$
 
 とくに実数 $r_1 \lt r_2$ について，実現値 $x_i$ が $r_1 \le x_i \le r_2$ となる確率は
 
-$$\begin{aligned}
-    \mathbb P[r_1 \le x_i \le r_2] = \int_{r_1}^{r_2} dx p(x)
-\end{aligned}$$
+$$
+    \operatorname{Pr}[r_1 \le x_i \le r_2] = \int_{r_1}^{r_2} dx p(x)
+$$
 
 で表されることから，$p(x)$ を **確率密度関数 (probability density function; pdf)** と呼ぶ．
 
@@ -56,7 +56,7 @@ $$
 特に $0$ まわりの $1$ 次モーメントを **期待値 (expected value)** または **平均 (mean)** といい，期待値まわりの $2$ 次モーメントを **分散 (variance)** という．また，分散の正の平方根を母集団の **標準偏差 (standard deviation)** という．
 
 $$\begin{aligned}
-    & \text{mean} &
+    & \text{expected value} &
     \mu_x
     &\coloneqq \left\langle x \right\rangle \\
     & \text{variance} &
@@ -86,50 +86,6 @@ $$\begin{aligned}
 
 ## 信頼区間とエラーバー
 
-データの真の値が，平均 $\mu_x$ であると仮定する．われわれは平均 $\mu_x$ の正体を知らないので，代わりに標本平均 $\overline x$ を真の値 $\mu_x$ の推定値として採用するということをよく行う．
-
-$$
-    \mu_x \approx \overline x
-$$
-
-しかし，標本平均 $\overline x$ は「$N$ 回の実験を行う」という操作を行うたびに変動することが予想されるため，$\overline x$ だけでは真の値の推定には不十分である．そこで次のように考える．まず，$\overline x$ もまた確率分布 $\widetilde p(\overline x)$ からサンプルされたものとして取り扱う．
-
-$$
-    \overline x \sim \widetilde p(\overline x)
-$$
-
-続いて $\widetilde p(\overline x)$ の標準偏差 $\sigma_{\overline x}$を見積もる．
-
-$$
-\begin{aligned}
-    & \operatorname{estimate} \quad \sigma_{\overline x} \\
-\end{aligned}
-$$
-
-「中心極限定理」によれば，データ $x$ が大量にある場合，その平均 $\overline x$ は正規分布に従う．これを利用して $\widetilde p(\overline x)$ を平均 $\mu_x$，標準偏差 $\sigma_{\overline x}$ の正規分布と近似する．
-
-$$
-    \widetilde p(\overline x) \approx \mathcal N(\mu_x, \sigma_{\overline x})
-$$
-
-これを信じるならば，正規分布の性質により，標本平均 $\overline x$ が $\mu_{x} \pm \sigma_{\overline x}$ の範囲に入っている確率が $68 \ \%$ となる．すると以下のように，真の値 $\mu_x$ が $\overline x \pm \sigma_{\overline x}$ の範囲に入っている確率もまた $68 \ \%$ となる．
-
-$$
-\begin{gathered}
-    \mu_x - \sigma_{\overline x}
-    \le \overline x
-    \le \mu_x + \sigma_{\overline x}
-    & \cdots & 68 \ \%
-    \\
-    \overline x - \sigma_{\overline x}
-    \le \mu_x
-    \le \overline x + \sigma_{\overline x}
-    & \cdots & 68 \ \%
-\end{gathered}
-$$
-
-ここでいう「$68 \ \%$」とは，<u>仮に「$N$ 個のデータを得る」という操作を10,000回繰り返した場合，だいたい6,800回くらいは真の値 $\mu_x$ が区間 $\overline x \pm \sigma_{\overline x}$ に含まれている</u>という意味である．このような推定方法を **頻度主義的な推定 (frequentism)** といい，推定された区間 $\overline x \pm \sigma_{\overline x}$ を **68％ 信頼区間 (68 % confidence interval; CI)** という．これを次のようなエラーバーとして表現することが多い．
-
 <figure class="center">
 <img src="/assets/2023-01-23.svg">
 <figcaption>
@@ -138,3 +94,70 @@ $$
 
 </figcaption>
 </figure>
+
+$N$ 個のデータをもとに期待値 $\mu_x$ を推定することを考える．われわれは期待値 $\mu_x$ の正体を知らないので，代わりに標本平均 $\overline x$ を期待値 $\mu_x$ の推定値として採用するということをよく行う．
+
+$$
+    \mu_x \approx \overline x
+$$
+
+しかし，標本平均 $\overline x$ は「$N$ 回の実験を行う」という操作を行うたびに変動することが予想されるため，$\overline x$ だけでは期待値の推定には不十分である．そこで次のように考える．まず，$\overline x$ もまた確率分布 $\widetilde p(\overline x)$ からサンプルされたものとして取り扱う．
+
+$$
+    \overline x \sim \widetilde p(\overline x)
+$$
+
+続いて $\widetilde p(\overline x)$ の期待値 $\mu_{\overline x}$ と標準偏差 $\sigma_{\overline x}$を見積もる．
+
+$$
+\begin{aligned}
+    & \operatorname{estimate} \quad \mu_{\overline x}, \sigma_{\overline x} \\
+\end{aligned}
+$$
+
+「中心極限定理」によれば，「標本 $\lbrace x_i \rbrace_{i=1}^N$ を採取して標本平均 $\overline x$ を得る」という操作を何度も繰り返すと，次第に標本平均 $\overline x$ は正規分布に従うようになる．これを利用して $\widetilde p(\overline x)$ を「期待値 $\mu_{\overline x}$，標準偏差 $\sigma_{\overline x}$ の正規分布」であるとみなすことにする．
+
+$$
+    \widetilde p(\overline x) \approx \mathcal N(\mu_x, \sigma_{\overline x})
+$$
+
+これを信じるならば，正規分布の性質により，標本平均 $\overline x$ が $\mu_{\overline x} \pm \sigma_{\overline x}$ の範囲に入っている確率が $68 \ \%$ となる．すると以下のように，標本平均の期待値 $\mu_{\overline x}$ が $\overline x \pm \sigma_{\overline x}$ の範囲に入っている確率もまた $68 \ \%$ となる．
+
+$$
+\begin{gathered}
+    \mu_{\overline x} - \sigma_{\overline x}
+    \le \overline x
+    \le \mu_{\overline x} + \sigma_{\overline x}
+    & \cdots & 68 \ \%
+    \\
+    \overline x - \sigma_{\overline x}
+    \le \mu_{\overline x}
+    \le \overline x + \sigma_{\overline x}
+    & \cdots & 68 \ \%
+\end{gathered}
+$$
+
+さて，実は期待値 $\mu_x$ と平均の期待値 $\mu_{\overline x}$ の値は一致する．これは次のような簡単な計算で示すことができる．
+
+$$
+\begin{aligned}
+    \mu_{\overline x}
+    &= \langle \overline x \rangle \\
+    &= \frac{1}{N} \sum_{i=1}^N \langle x_i \rangle \\
+    &= \langle x \rangle \\
+    &= \mu_x
+\end{aligned}
+$$
+
+このことから，標本平均の期待値の代わりに期待値 $\mu_x$ が $\overline x \pm \sigma_{\overline x}$ の範囲に入っている確率も $68 \ \%$ と見積もってよいことがわかる．
+
+$$
+\begin{gathered}
+    \overline x - \sigma_{\overline x}
+    \le \mu_x
+    \le \overline x + \sigma_{\overline x}
+    & \cdots & 68 \ \%
+\end{gathered}
+$$
+
+ここでいう「$68 \ \%$」とは，<u>仮に「$N$ 個のデータを得る」という操作を $10,000$ 回繰り返した場合，期待値 $\mu_{\overline x}$ が区間 $\overline x \pm \sigma_{\overline x}$ に含まれているという事象がだいたい $6,800$ 回くらい生じる</u>という意味である．このような推定方法を **頻度主義的な推定 (frequentism)** といい，推定された区間 $\overline x \pm \sigma_{\overline x}$ を期待値 $\mu_x$ の **68％信頼区間 (68% confidence interval; CI)** という．これを図1のようなエラーバーとして表現することが多い．
