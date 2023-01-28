@@ -5,6 +5,25 @@ Placeholder to allow defining custom head, in principle, you can add anything he
 2. Customize default _includes/custom-head.html in your source directory and insert the given code snippet.
 {% endcomment %}
 
+{% if page.mathjax %}
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            macros: {
+                coloneqq: ":=",
+                bm: ["\\boldsymbol{#1}", 1]
+            }
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
+
 {% if page.katex %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
     integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">

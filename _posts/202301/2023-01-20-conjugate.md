@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "線形回帰モデルと正規事前分布"
+title: "[回帰6] 線形回帰モデルと正規事前分布"
 categories: note
 description: 多変量正規分布を事前分布とした場合の線形回帰モデルの事後分布を概説します．
 tags:
@@ -29,7 +29,7 @@ $$
     = \sqrt\frac{1}{(2\pi)^d \det \bm V} \exp \left( -\frac{1}{2} (\bm x - \bm m)^\mathsf{T} V^{-1} (\bm x - \bm m) \right)
 $$
 
-パラメータ $\bm m$ は平均ベクトルと呼ばれる $d$ 次元ベクトルで，$\bm V$ は共分散行列と呼ばれる $d \times d$ 半正定値行列である．$\bm V$ の $(i,j)$ 要素は $x_i$ と $x_j$ の共分散を表す．
+パラメータ<tex>$\bm m$</tex>は平均ベクトルと呼ばれる<tex>$d$</tex>次元ベクトルで，<tex>$\bm V$</tex>は共分散行列と呼ばれる<tex>$d \times d$</tex>半正定値行列である．<tex>$\bm V$</tex>の<tex>$(i,j)$</tex>要素は<tex>$x_i$</tex>と<tex>$x_j$</tex>の共分散を表す．
 
 $$
 \begin{gathered}
@@ -42,7 +42,7 @@ $$
 \end{gathered}
 $$
 
-もしも共分散行列が $\bm V = \sigma^2 \bm I_d$ ならば，次のことが成り立つ．
+もしも共分散行列が<tex>$\bm V = \sigma^2 \bm I_d$</tex>ならば，次のことが成り立つ．
 
 $$
 \begin{aligned}
@@ -114,7 +114,7 @@ $$
 
 ### 平方完成
 
-最後の行の指数関数の中をさらに平方完成させる．$\bm w$ について整理する．
+最後の行の指数関数の中をさらに平方完成させる．<tex>$\bm w$</tex>について整理する．
 
 $$
 \begin{aligned}
@@ -140,13 +140,13 @@ $$
 \end{aligned}
 $$
 
-ここで $\bm w$ を含まない項は定数項 $\mathrm{const.}$ としてまとめた．少々ごちゃついてきたが，
+ここで<tex>$\bm w$</tex>を含まない項は定数項<tex>$\mathrm{const.}$</tex>としてまとめた．少々ごちゃついてきたが，
 
 $$
     \bm V_{d}^{-1} \coloneqq \frac{1}{\sigma^2} \bm X^\mathsf{T} \bm X + \bm V_{0}^{-1}
 $$
 
-とおき直せば見通しがよくなる．ただし $\bm X^\mathsf{T} \bm X$ および $\bm V_0$ はともに対称行列であることから，$\bm V_{d}^\mathsf{T} = \bm V_{d}$ であることに注意する．
+とおき直せば見通しがよくなる．ただし<tex>$\bm X^\mathsf{T} \bm X$</tex>および<tex>$\bm V_0$</tex>はともに対称行列であることから，<tex>$\bm V_{d}^\mathsf{T} = \bm V_{d}$</tex>であることに注意する．
 
 $$
 \begin{aligned}
@@ -219,9 +219,9 @@ $$
 
 事前分布は正規分布で，事後分布もまた正規分布である．このように，正規分布を尤度関数として採用し，事前分布として多変量正規分布を使用した場合，事後分布もまた多変量正規分布となる．
 
-一般に，尤度関数 $p(\mathcal D \| w)$ に対して事前分布 $p(w)$ と事後分布 $p(w \| \mathcal D)$ が同じ形である場合，事前分布 $p(w)$ を尤度関数 $p(\mathcal D \| w)$ の **共役事前分布 (conjugate prior)** という．特に，尤度関数，事前分布，事後分布ともに同じ分布族 (family) に属す場合，**自然共役 (natural conjugate)** であるといわれる．
+一般に，尤度関数<tex>$p(\mathcal D | w)$</tex>に対して事前分布<tex>$p(w)$</tex>と事後分布<tex>$p(w | \mathcal D)$</tex>が同じ形である場合，事前分布<tex>$p(w)$</tex>を尤度関数<tex>$p(\mathcal D \ w)$</tex>の**共役事前分布 (conjugate prior)** という．特に，尤度関数，事前分布，事後分布ともに同じ分布族 (family) に属す場合，**自然共役 (natural conjugate)** であるといわれる．
 
-今回の場合は，**正規分布 (事前分布) は正規分布 (尤度関数) の自然共役事前分布である** という事実に由来する．
+今回の場合は，**正規分布 (事前分布) は正規分布 (尤度関数) の自然共役事前分布である**という事実に由来する．
 
 $$
 \begin{darray}{ll||cc}

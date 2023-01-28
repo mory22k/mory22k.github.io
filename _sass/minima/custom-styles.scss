@@ -24,7 +24,7 @@ h6,
 }
 
 .katex-display {
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
 }
 
@@ -38,10 +38,10 @@ figure.center {
     display: grid;
     place-items: center;
     text-align: center;
-    margin: 1em 0;
+    margin: 0 auto 1em;
 
     img{
-        margin: 1em 0;
+        margin: 0 auto 1em;
     }
 }
 
@@ -52,4 +52,12 @@ figure.center {
 u {
     text-decoration: none;
     background: linear-gradient(transparent 85%, var(--gray) 0%);
+}
+
+tex {
+    padding: 0 0.2em;
+}
+
+hr {
+    margin: 1em 0;
 }

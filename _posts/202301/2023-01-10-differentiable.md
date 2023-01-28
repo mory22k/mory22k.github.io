@@ -75,10 +75,8 @@ $$
 
 $$
 \begin{aligned}
-\begin{aligned}
     \bm x & \in \mathbb R^m \\
     \bm y & \in \mathbb R^n
-\end{aligned}
 \end{aligned}
 $$
 
@@ -176,7 +174,7 @@ $$
 
 である．
 
-ここで，$\mathbb R^{a \times b \times c}$ を「$a \times b \times c$ 配列」と呼ぶことにする．また，テンソルの呼び方に倣って
+ここで，<tex>$\mathbb R^{a \times b \times c}$</tex>を「<tex>$a \times b \times c$</tex>配列」と呼ぶことにする．また，テンソルの呼び方に倣って
 
 $$
 \begin{darray}{c}
