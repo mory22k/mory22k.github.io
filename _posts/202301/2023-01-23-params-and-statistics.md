@@ -3,11 +3,13 @@ layout: post
 title: "[分析1] 母数と標本統計量"
 categories: note
 description: 何らかの確率分布に従うデータのサンプルの処理に対する最も基本的な考え方をまとめます．
-tags: analytics
+tags: analysis
 katex: true
 ---
 
 ある実験によってデータを得たときのデータの取り扱いの最も基本的な部分をまとめる．
+
+- 次回: [標本平均の期待値と分散](/2023/01/24)
 
 ### 参考
 
@@ -19,7 +21,7 @@ katex: true
 
 ## 状況設定
 
-ある値<tex>$x$</tex>を得る実験を同じ条件のもとで<tex>$N$</tex>回行い，<tex>$N$</tex>個のデータを得たとする．
+ある値<tex>$x$</tex>を得る実験を同じ条件のもとで<tex>$N$</tex>回行ない，<tex>$N$</tex>個のデータを得たとする．
 
 $$
     \lbrace x_i \rbrace_{i=1}^N = \{ x_1, x_2, \dots, x_N \}
