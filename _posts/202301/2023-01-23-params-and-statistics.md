@@ -3,7 +3,7 @@ layout: post
 title: "[分析1] 母数と標本統計量"
 categories: note
 description: 何らかの確率分布に従うデータのサンプルの処理に対する最も基本的な考え方をまとめます．
-tags: data_analysis
+tags: analytics
 katex: true
 ---
 
@@ -25,10 +25,10 @@ $$
     \lbrace x_i \rbrace_{i=1}^N = \{ x_1, x_2, \dots, x_N \}
 $$
 
-各<tex>$x_i$</tex>には誤差が含まれる．そこで，各<tex>$x_i$</tex>はある未知の確率分布<tex>$p(x)$</tex>に従う確率変数<tex>$x$</tex>からサンプルされた値として取り扱うことがよく行われる．
+各<tex>$x_i$</tex>には誤差が含まれる．そこで，以下では各<tex>$x_i$</tex>はある未知の確率分布<tex>$p(x)$</tex>に従う確率変数<tex>$x$</tex>から独立同分布サンプルされた値として取り扱う．
 
 $$
-    x_i \sim p(x)
+    x_i \underset{\text{i.i.d.}}{\sim} p(x)
 $$
 
 ## 確率密度関数
@@ -53,15 +53,22 @@ $$
 \end{aligned}
 $$
 
-特に<tex>$0$</tex>まわりの<tex>$1$</tex>次モーメントを**期待値 (expected value)** または**平均 (mean)** といい，期待値まわりの<tex>$2$</tex>次モーメントを**分散 (variance)** という．また，分散の正の平方根を母集団の**標準偏差 (standard deviation)** という．
+特に<tex>$0$</tex>まわりの<tex>$1$</tex>次モーメントを**期待値 (expected value)** または**平均 (mean)** といい，<tex>$\mathrm E[x]$</tex>と表す．また期待値まわりの<tex>$2$</tex>次モーメントを**分散 (variance)** といい，<tex>$\mathrm V[x]$</tex>と表す．さらに分散の正の平方根を母集団の**標準偏差 (standard deviation)** という．
+
+$$
+\begin{aligned}
+    & \text{expected value} &       \mathrm E[x] &\coloneqq \left\langle x \right\rangle \\
+    & \text{variance} &             \mathrm V[x] &\coloneqq \left\langle (x - \left\langle x \right\rangle )^2 \right\rangle = \left\langle x^2 \right\rangle - \left\langle x \right\rangle^2 \\
+    & \text{standard deviation} &   \sqrt{\mathrm V[x]}
+\end{aligned}
+$$
+
+これらはしばしば次のように記号が付けられる．
 
 $$\begin{aligned}
-    & \text{expected value} &
-    \mu_x &\coloneqq \left\langle x \right\rangle \\
-    & \text{variance} &
-    \sigma_x^2 &\coloneqq \left\langle (x - \left\langle x \right\rangle )^2 \right\rangle = \left\langle x^2 \right\rangle - \left\langle x \right\rangle^2 \\
-    & \text{standard deviation} &
-    \sigma_x &\coloneqq \sqrt{\sigma_x^2}
+    & \text{expected value} &       \mu_x &= \mathrm E[x] \\
+    & \text{variance} &             \sigma_x^2 &= \mathrm V[x] \\
+    & \text{standard deviation} &   \sigma_x &= \sqrt{\mathrm V[x]}
 \end{aligned}$$
 
 期待値や分散のように，確率分布<tex>$p(x)$</tex>を特徴づける値のことを**母数 (parameter; パラメータ)** という．
