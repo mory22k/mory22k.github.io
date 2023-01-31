@@ -150,7 +150,7 @@ $$
 
 [^1]: **分散の不偏推定量の平方根は標準偏差の不偏推定量ではない**問題は依然として残るが，$N$ が十分大きな場合にはそれほど核心的な問題に発展することはほとんどないのでここでは無視した．
 
-## まとめ
+### 結果
 
 以上をまとめると，
 
@@ -195,10 +195,14 @@ $$
 
 $$
 \left\{
-\begin{aligned}
-    f_\text{bias} &\simeq \frac{1}{2} \frac{1}{N-1} \frac{d^2 f}{d \mu_x^2} s_x^2 \\
-    \mathbb V[f(\overline x)] &\simeq \frac{1}{N-1} \left( \frac{d f}{d \mu_x} \right)^2 s_x^2
-\end{aligned}
+\begin{alignedat}{2}
+    f_\text{bias}
+    &= \frac{1}{2} \frac{1}{N} \frac{d^2 f}{d \mu_x^2} \mathbb V[x]
+    && \simeq \frac{1}{2} \frac{1}{N-1} \frac{d^2 f}{d \mu_x^2} s_x^2, \\
+    \mathbb V[f(\overline x)]
+    &= \frac{1}{N} \left(\frac{df}{d \mu_x}\right)^2 \mathbb V[x]
+    && \simeq \frac{1}{N-1} \left( \frac{d f}{d \mu_x} \right)^2 s_x^2
+\end{alignedat}
 \right.
 $$
 
