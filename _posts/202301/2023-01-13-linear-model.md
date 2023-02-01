@@ -134,3 +134,53 @@ $$
 $$
 
 この<tex>$p(\bm y | \bm X, \bm w)$</tex>を<tex>$\bm w$</tex>についての関数と捉えた場合「<tex>$\bm X$</tex>と<tex>$\bm y$</tex>が得られたときのパラメータ<tex>$\bm w$</tex>の尤もらしさ」を表す関数と解釈できる．そこで<tex>$p(\bm y | \bm X, \bm w)$</tex>を<tex>$\bm w$</tex>の**尤度関数 (likelihood function)** という．
+
+## 多変量正規分布
+
+**多変量正規分布 (multivariate normal distribution)** と呼ばれる同時確率分布を導入する．確率密度関数は次式で与えられる．
+
+$$
+    \mathcal N_d(\bm x | \bm m, \bm V)
+    = \sqrt\frac{1}{(2\pi)^d \det \bm V} \exp \left( -\frac{1}{2} (\bm x - \bm m)^\mathsf{T} V^{-1} (\bm x - \bm m) \right)
+$$
+
+パラメータ<tex>$\bm m$</tex>は平均ベクトルと呼ばれる<tex>$d$</tex>次元ベクトルで，<tex>$\bm V$</tex>は共分散行列と呼ばれる<tex>$d \times d$</tex>半正定値行列である．<tex>$\bm V$</tex>の<tex>$(i,j)$</tex>要素は<tex>$x_i$</tex>と<tex>$x_j$</tex>の共分散を表す．
+
+$$
+\begin{gathered}
+\begin{gathered}
+    \bm x &\in& \mathbb R^{d} \\
+    \bm m &\in& \mathbb R^{d} \\
+    \bm V &\in& \mathbb R^{d \times d} \\
+\end{gathered} \\
+    {}^\forall \bm x \in \mathbb R^d, \bm x^\mathsf{T} \bm V \bm x \ge 0
+\end{gathered}
+$$
+
+もしも共分散行列が<tex>$\bm V = \sigma^2 \bm I_d$</tex>ならば，次のことが成り立つ．
+
+$$
+\begin{aligned}
+    \mathcal N_d(\bm x | \bm m, \sigma^2 \bm I)
+    &=
+    \sqrt \frac{1}{(2\pi)^d \det (\sigma^2 \bm I_d)} \exp \left( -\frac{1}{2} (\bm x - \bm m)^\mathsf{T} (\sigma^2 \bm I)^{-1} (\bm x - \bm m) \right)
+    \\
+    &=
+    \sqrt \frac{1}{(2\pi\sigma^2)^d} \exp \left( -\frac{1}{2 \sigma^2} \|\bm x - \bm m\|_2^2 \right) \\
+    &=
+    \prod_{i=1}^{d}
+    \sqrt \frac{1}{2\pi \sigma^2} \exp \left( -\frac{1}{2\sigma^2} (x_i - m_i)^2 \right) \\
+    &=
+    \prod_{i=1}^{d} \mathcal N(x_i | m_i, \sigma^2)
+\end{aligned}
+$$
+
+このことを用いれば，線形回帰モデルの尤度関数は次のようにも表現できる．
+
+$$
+\begin{aligned}
+    p(\bm y | \bm X, \bm w)
+    &= \prod_{i=1}^{d} \mathcal N(y_i | \bm x_i^\mathsf{T} \bm w, \sigma^2) \\
+    &= \mathcal N_d(\bm y | \bm X \bm w, \sigma^2 \bm I_d)
+\end{aligned}
+$$
