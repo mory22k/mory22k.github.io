@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[分析6] ジャックナイフ法によるバイアスの補正"
+title: "[分析7] ジャックナイフ法によるバイアスの補正"
 categories: note
 description: ジャックナイフ法によってバイアス項を計算する．
 tags: analysis
