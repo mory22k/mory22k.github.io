@@ -3,7 +3,7 @@ layout: post
 title: "[量子情報1] ディラックの表記 (量子ビット)"
 categories: note
 description: 量子情報科学で用いられるディラックの記法を概説する．
-tags: analysis
+tags: quantum
 katex: true
 ---
 
@@ -28,7 +28,7 @@ $$
 このようなケットベクトル<tex>$| \psi \rangle$</tex>に対し，記号の向きを反対にした<tex>$\langle \psi |$</tex>はエルミート共役<tex>$| \psi \rangle^\dagger$</tex>を表す．
 
 $$
-    | \psi \rangle \coloneqq
+    \langle \psi | \coloneqq
     \left[\begin{darray}{}
         1-i & \sqrt 2
     \end{darray}\right] \in \mathbb C^2
