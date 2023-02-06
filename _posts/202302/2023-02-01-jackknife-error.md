@@ -9,6 +9,8 @@ katex: true
 
 ジャックナイフ法によって標準誤差を計算する．
 
+{% include contents/analysis.md %}
+
 ## 標準誤差
 
 出力値<tex>$f(\overline x)$</tex>の分散<tex>$\mathbb V[f(\overline x)]$</tex>は次式で表されたことを確認しておく．

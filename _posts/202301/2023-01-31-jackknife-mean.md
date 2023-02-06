@@ -9,6 +9,8 @@ katex: true
 
 ジャックナイフ法によってバイアス項を計算する．
 
+{% include contents/analysis.md %}
+
 ## 期待値
 
 出力値<tex>$f(\overline x)$</tex>の期待値<tex>$\mathbb V[f(\overline x)]$</tex>は次式で表される．
