@@ -2,7 +2,7 @@
 layout: post
 title: "[分析5] 誤差伝播"
 categories: note
-description: 得られたデータを何らかの関数に入力するときのエラーバーを誤差伝播で計算することについて概説します．
+description: 標本統計量を関数に入力したときの誤差伝播の考え方をまとめておく．
 tags: analysis
 katex: true
 ---
