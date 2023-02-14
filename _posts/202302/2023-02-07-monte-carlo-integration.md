@@ -3,7 +3,7 @@ layout: post
 title: "モンテカルロ積分"
 categories: note
 description: 数値積分法に乱択アルゴリズムを組み合わせたモンテカルロ積分を簡単に導入する．
-tags: numerical_integrals
+tags: numerical_integrals Monde_Carlo_method
 katex: true
 ---
 
