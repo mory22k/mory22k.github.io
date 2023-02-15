@@ -2,7 +2,7 @@
 layout: post
 title: "[MCMC2] メトロポリス・ヘイスティングス法"
 categories: note
-description: ある確率分布に従う乱数をMCMCによって生成するときの条件をまとめる．
+description: 基本的なMCMC法であるメトロポリス・ヘイスティングス法を概説する．
 tags: MCMC Monde_Carlo_method
 katex: true
 ---
@@ -11,7 +11,7 @@ katex: true
 
 ## メトロポリス・ヘイスティングス法
 
-**メトロポリス・ヘイスティングス法 (the Metropolis-Hastings method; M-H法)** は**MCMC法**の一つ．直接サンプリングすることが困難な確率分布からサンプルを生成するために使用される．**メトロポリス法**や**ギブスサンプリング (熱浴法)** をより一般化したものと捉えることができる．
+**メトロポリス・ヘイスティングス法 (the Metropolis-Hastings algorithm; M-H法)** は**MCMC法**の一つ．直接サンプリングすることが困難な確率分布からサンプルを生成するために使用される．**メトロポリス法**や**ギブスサンプリング (熱浴法)** をより一般化したものと捉えることができる．
 
 ## 準備
 
@@ -25,19 +25,19 @@ $$
 
 ## アルゴリズム
 
-確率分布<tex>$P(x)$</tex>に従う乱数列<tex>$\cal X$</tex>を生成する．
+確率分布<tex>$P(x)$</tex>に従う乱数列<tex>$X$</tex>を生成する．
 
 <tex>
 $\quad
 \begin{aligned}
-    &1. && {\cal X} \leftarrow \{\} \\
-    &2. && \text{for } i \in \{1, 2, \dots, N\} : \\
+    &1. && X \leftarrow \{\} \\
+    &2. && \text{for } t \in \{1, 2, \dots, N\} : \\
     &3. && \qquad y \sim Q(y | x) \\
     &4. && \qquad r \sim {\cal U}(0, 1) \\
     &5. && \qquad \text{if } A(y | x) \gt r : \\
     &6. && \qquad \qquad x \leftarrow y \\
-    &7. && \qquad {\cal X} \leftarrow {\cal X} \cup \{x\} \\
-    &8. && \operatorname{return} {\cal X}
+    &7. && \qquad X \leftarrow X \cup \{x\} \\
+    &8. && \operatorname{return} X
 \end{aligned}
 $
 </tex>
