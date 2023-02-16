@@ -9,6 +9,8 @@ katex: true
 
 メトロポリス法を熱平衡状態の系のシミュレーションの観点から導入する．
 
+{% include contents/mcmc.md %}
+
 ## 熱平衡状態からの導入
 
 確率分布<tex>$P(\bm x)$</tex>を，熱平衡状態の系における自由度<tex>$\bm x$</tex>の分布とする．
