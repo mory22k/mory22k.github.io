@@ -31,9 +31,9 @@ $$
 $\quad
 \begin{aligned}
     &1. && X \leftarrow \{\} \\
-    &2. && \text{for } t \in \{1, 2, \dots, N\} : \\
+    &2. && \text{for } t \in \{1, 2, \dots, n\} : \\
     &3. && \qquad y \sim Q(y | x) \\
-    &4. && \qquad r \sim {\cal U}(0, 1) \\
+    &4. && \qquad r \sim {\cal U}(r | 0, 1) \\
     &5. && \qquad \text{if } A(y | x) \gt r : \\
     &6. && \qquad \qquad x \leftarrow y \\
     &7. && \qquad X \leftarrow X \cup \{x\} \\
@@ -60,7 +60,7 @@ $
 
 $$
 Q(\bm y | \bm x)
-= \mathcal N_d(\bm y | \bm 0, \bm I)
+= \mathcal N_N(\bm y | \bm 0, \bm I)
 \propto \exp \! \left( -\frac{1}{2} \| \bm y \|_2^2 \right)
 $$
 

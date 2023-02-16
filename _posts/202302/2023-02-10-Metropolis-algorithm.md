@@ -17,9 +17,9 @@ M-H法は次のようなアルゴリズムであった．
 $\quad
 \begin{aligned}
     &1. && X \leftarrow \{\} \\
-    &2. && \text{for } t \in \{1, 2, \dots, N\} : \\
+    &2. && \text{for } t \in \{1, 2, \dots, n\} : \\
     &3. && \qquad y \sim Q(y | x) \\
-    &4. && \qquad r \sim {\cal U}(0, 1) \\
+    &4. && \qquad r \sim {\cal U}(r | 0, 1) \\
     &5. && \qquad \text{if } A(y | x) \gt r : \\
     &6. && \qquad \qquad x \leftarrow y \\
     &7. && \qquad X \leftarrow X \cup \{x\} \\
@@ -60,9 +60,9 @@ $$
 $\quad
 \begin{aligned}
     &1. && X \leftarrow \{\} \\
-    &2. && \text{for } t \in \{1, 2, \dots, N\} : \\
+    &2. && \text{for } t \in \{1, 2, \dots, n\} : \\
     &3. && \qquad y \sim {\cal U}(y | x-c, x+c) \\
-    &4. && \qquad r \sim {\cal U}(0, 1) \\
+    &4. && \qquad r \sim {\cal U}(r | 0, 1) \\
     &5. && \qquad \text{if } \frac{P(y)}{P(x)} \gt r : \\
     &6. && \qquad \qquad x \leftarrow y \\
     &7. && \qquad X \leftarrow X \cup \{x\} \\
