@@ -2,12 +2,12 @@
 layout: post
 title: "[MCMC6] ハミルトニアン・モンテカルロ法"
 categories: note
-description: 分子軌道法を用いたMH方であるHMC法を導入する．
+description: 分子動力学法を用いたMH法であるハミルトニアン・モンテカルロ法を導入する．
 tags: MCMC Monde_Carlo_method
 katex: true
 ---
 
-分子軌道法を用いたMH法であるHMC法を導入する．
+分子動力学法を用いたMH法であるハミルトニアン・モンテカルロ法を導入する．
 
 {% include contents/mcmc.md %}
 
@@ -152,7 +152,7 @@ $\quad
 $
 </tex>
 
-このようなM-H法の実装を特に**ハミルトニアン・モンテカルロ法 (the Hamiltonial Monte Carlo method; HMC法)** という．
+このようなM-H法の実装を特に**ハミルトニアン・モンテカルロ法 (the Hamiltonian Monte Carlo method; HMC法)** という．
 
 ## ちなみに
 
