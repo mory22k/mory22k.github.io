@@ -27,7 +27,7 @@ $$
     \bm x_{\setminus j} \coloneqq \left[\begin{darray}{} x_1 \\ \vdots \\ x_{j-1} \\ x_{j+1} \\ \vdots \\ x_N \end{darray}\right]
 $$
 
-## メトロポリス・ヘイスティングス法
+## メトロポリス・ヘイスティングス法からの導入
 
 M-H法では，以下のようなアルゴリズムを利用すればよいのであった．
 
@@ -96,13 +96,13 @@ $\quad
     &2. && \text{for } t \in \{1, 2, \dots, n\} : \\
     &3. && \qquad \text{for } j \in \{1, 2, \dots, N\} : \\
     &4. && \qquad \qquad x_j \sim Q(x_j | \bm x_{\setminus j})\\
-    &7. && \qquad X \leftarrow X \cup \{\bm x\} \\
-    &8. && \operatorname{return} X
+    &5. && \qquad \qquad X \leftarrow X \cup \{\bm x\} \\
+    &6. && \operatorname{return} X
 \end{aligned}
 $
 </tex>
 
-このアルゴリズムのように，元の確率分布から直接サンプルする代わりに，条件付き確率分布から次々と各要素をサンプルすることによって乱数列を近似的に生成する方法を**ギブスサンプリング (a Gibbs sampling; a Gibbs sampler)** という．
+このように，元の確率分布から直接サンプルする代わりに，条件付き確率分布から次々と各要素をサンプルすることによって乱数列を近似的に生成する方法を**ギブスサンプリング (a Gibbs sampling; a Gibbs sampler)** という．
 
 ## メリット
 
