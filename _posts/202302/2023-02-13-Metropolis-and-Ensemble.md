@@ -67,8 +67,8 @@ $$
 
 その上でエネルギーの差分<tex>$\Delta E = E(\bm x + \Delta \bm x) - E(\bm x)$</tex>を計算した上で，
 
-1. もしも<tex>$\Delta E \le 0$</tex>ならば遷移後の自由度を受け入れる: <tex>$\bm x \leftarrow \bm x + \Delta \bm x$</tex>
-2. さもなくば，確率<tex>$\exp(-\beta \Delta E)$</tex>で<tex>$\bm x \leftarrow \bm x + \Delta \bm x$</tex>
+1. もしも<tex>$\Delta E \le 0$</tex>ならば遷移後の自由度を受け入れる: <tex>$\bm x \gets \bm x + \Delta \bm x$</tex>
+2. さもなくば，確率<tex>$\exp(-\beta \Delta E)$</tex>で<tex>$\bm x \gets \bm x + \Delta \bm x$</tex>
 
 とする．こうして生成される自由度の系列<tex>$\{\bm x^i\}_{i=1}^n$</tex>は，確率分布<tex>$P(\bm x)$</tex>に従う．
 
@@ -79,15 +79,15 @@ $$
 <tex>
 $\quad
 \begin{aligned}
-    &1. && X \leftarrow \{\} \\
+    &1. && X \gets \{\} \\
     &2. && \text{for } t \in \{1, 2, \dots, n\} : \\
     &3. && \qquad \text{for } i \in \{1, 2, \dots, N\} : \\
     &4. && \qquad \qquad \Delta x_i \sim {\cal U}(\Delta x_i | -c_i, c_i) \\
-    &5. && \qquad \Delta E \leftarrow E(\bm x + \Delta \bm x) - E(\bm x) \\
+    &5. && \qquad \Delta E \gets E(\bm x + \Delta \bm x) - E(\bm x) \\
     &6. && \qquad r \sim {\cal U}(r | 0, 1) \\
     &7. && \qquad \text{if } \exp(-\beta \Delta E) \gt r : \\
-    &8. && \qquad \qquad \bm x \leftarrow \bm x + \Delta \bm x \\
-    &9. && \qquad X \leftarrow X \cup \{\bm x\} \\
+    &8. && \qquad \qquad \bm x \gets \bm x + \Delta \bm x \\
+    &9. && \qquad X \gets X \cup \{\bm x\} \\
     &10. && \operatorname{return} X
 \end{aligned}
 $
@@ -98,14 +98,14 @@ $
 <tex>
 $\quad
 \begin{aligned}
-    &1. && X \leftarrow \{\} \\
+    &1. && X \gets \{\} \\
     &2. && \text{for } t \in \{1, 2, \dots, n\} : \\
     &3. && \qquad \text{for } i \in \{1, 2, \dots, N\} : \\
-    &4. && \qquad \qquad y_i \sim {\cal U}(\Delta x_i | x_i-c_i, x_i+c_i) \\
+    &4. && \qquad \qquad y_i \sim {\cal U}(y_i | x_i-c_i, x_i+c_i) \\
     &5. && \qquad r \sim {\cal U}(r | 0, 1) \\
     &6. && \qquad \text{if } \frac{P(\bm y)}{P(\bm x)} \gt r : \\
-    &7. && \qquad \qquad \bm x \leftarrow \bm y \\
-    &8. && \qquad X \leftarrow X \cup \{\bm x\} \\
+    &7. && \qquad \qquad \bm x \gets \bm y \\
+    &8. && \qquad X \gets X \cup \{\bm x\} \\
     &9. && \operatorname{return} X
 \end{aligned}
 $

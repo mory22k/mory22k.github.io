@@ -49,7 +49,7 @@ $$
 
 $$
 \begin{alignedat}2
-    (\bm y, \bm q) &\leftarrow&& \operatorname{MD}(\bm x, \bm p) \\
+    (\bm y, \bm q) &\gets&& \operatorname{MD}(\bm x, \bm p) \\
     (\bm y, \bm q) &=&& \operatorname{MD}(\bm x, \bm p)
 \end{alignedat}
 $$
@@ -138,15 +138,15 @@ $$
 <tex>
 $\quad
 \begin{aligned}
-    &1. && X \leftarrow \{\} \\
+    &1. && X \gets \{\} \\
     &2. && \text{for } t \in \{1, 2, \dots, n\} : \\
     &3. && \qquad \bm p \sim {\cal N}_N (\bm p | \bm 0, \bm I) \\
-    &4. && \qquad (\bm y, \bm q) \leftarrow \operatorname{MD}(\bm x, \bm p) \\
-    &5. && \qquad \Delta {\cal H} \leftarrow {\cal H} (\bm y, \bm q) - {\cal H} (\bm x, \bm p) \\
+    &4. && \qquad (\bm y, \bm q) \gets \operatorname{MD}(\bm x, \bm p) \\
+    &5. && \qquad \Delta {\cal H} \gets {\cal H} (\bm y, \bm q) - {\cal H} (\bm x, \bm p) \\
     &6. && \qquad r \sim {\cal U}(r | 0, 1) \\
     &7. && \qquad \text{if } \exp(-\Delta {\cal H}) \gt r: \\
-    &8. && \qquad \qquad \bm x \leftarrow \bm y \\
-    &9. && \qquad X \leftarrow X \cup \{ \bm x \} \\
+    &8. && \qquad \qquad \bm x \gets \bm y \\
+    &9. && \qquad X \gets X \cup \{ \bm x \} \\
     &10. && \text{return } X
 \end{aligned}
 $

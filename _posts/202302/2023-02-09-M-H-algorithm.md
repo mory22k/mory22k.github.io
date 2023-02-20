@@ -32,13 +32,13 @@ $$
 <tex>
 $\quad
 \begin{aligned}
-    &1. && X \leftarrow \{\} \\
+    &1. && X \gets \{\} \\
     &2. && \text{for } t \in \{1, 2, \dots, n\} : \\
     &3. && \qquad y \sim Q(y | x) \\
     &4. && \qquad r \sim {\cal U}(r | 0, 1) \\
     &5. && \qquad \text{if } A(y | x) \gt r : \\
-    &6. && \qquad \qquad x \leftarrow y \\
-    &7. && \qquad X \leftarrow X \cup \{x\} \\
+    &6. && \qquad \qquad x \gets y \\
+    &7. && \qquad X \gets X \cup \{x\} \\
     &8. && \operatorname{return} X
 \end{aligned}
 $
@@ -46,7 +46,7 @@ $
 
 なお，以上において<tex>$\cal U(0, 1)$</tex>は0以上1未満の連続一様分布を表す．また4. 以降については，次のような内容 (メトロポリステスト) を意味している．
 
-- 確率 <tex>$\min( A(y | x), 1 )$</tex> で提案を受理 (accept)，<tex>$x \leftarrow y$</tex>．
+- 確率 <tex>$\min( A(y | x), 1 )$</tex> で提案を受理 (accept)，<tex>$x \gets y$</tex>．
 - さもなくば棄却 (reject)，<tex>$y$</tex>を捨てる．
 
 したがって，上記をもう少し端折って書くと

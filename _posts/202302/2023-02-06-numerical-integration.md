@@ -74,14 +74,14 @@ $$
 
 アルゴリズムは次の通り．
 
-1. <tex>$dx \leftarrow \dfrac{b-a}{N}$</tex>
-2. <tex>$x_0 \leftarrow a$</tex>
-3. <tex>$f_0 \leftarrow f(x_0)$</tex>
-4. <tex>$F_0 \leftarrow 0$</tex>
+1. <tex>$dx \gets \dfrac{b-a}{N}$</tex>
+2. <tex>$x_0 \gets a$</tex>
+3. <tex>$f_0 \gets f(x_0)$</tex>
+4. <tex>$F_0 \gets 0$</tex>
 5. **for** <tex>$i \in \{0, 1, 2, \dots, N-1\}$</tex> do:
-6. $\quad$ <tex>$x_{i+1} \leftarrow x_i + dx$</tex>
-7. $\quad$ <tex>$f_{i+1} \leftarrow f(x_{i+1})$</tex>
-8. $\quad$ <tex>$F_{i+1} \leftarrow F_i + \dfrac{f_i + f_{i+1}}{2}$</tex>
+6. $\quad$ <tex>$x_{i+1} \gets x_i + dx$</tex>
+7. $\quad$ <tex>$f_{i+1} \gets f(x_{i+1})$</tex>
+8. $\quad$ <tex>$F_{i+1} \gets F_i + \dfrac{f_i + f_{i+1}}{2}$</tex>
 9. **return** <tex>$F_N \times dx$</tex>
 
 ## 中点積分法
@@ -116,14 +116,14 @@ $$
 
 アルゴリズムは次の通り．
 
-1. <tex>$dx \leftarrow \dfrac{b-a}{N}$</tex>
-2. <tex>$x_0 \leftarrow a + \dfrac{1}{2} dx$</tex>
-3. <tex>$f_0 \leftarrow f(x_0)$</tex>
-4. <tex>$F_0 \leftarrow 0$</tex>
+1. <tex>$dx \gets \dfrac{b-a}{N}$</tex>
+2. <tex>$x_0 \gets a + \dfrac{1}{2} dx$</tex>
+3. <tex>$f_0 \gets f(x_0)$</tex>
+4. <tex>$F_0 \gets 0$</tex>
 5. **for** <tex>$i \in \{0, 1, 2, \dots, N-1\}$</tex> do:
-6. $\quad$ <tex>$x_{i+1} \leftarrow x_i + dx$</tex>
-7. $\quad$ <tex>$f_{i+1} \leftarrow f(x_{i})$</tex>
-8. $\quad$ <tex>$F_{i+1} \leftarrow F_i + \dfrac{f_i}{2}$</tex>
+6. $\quad$ <tex>$x_{i+1} \gets x_i + dx$</tex>
+7. $\quad$ <tex>$f_{i+1} \gets f(x_{i})$</tex>
+8. $\quad$ <tex>$F_{i+1} \gets F_i + \dfrac{f_i}{2}$</tex>
 9. **return** <tex>$F_N \times dx$</tex>
 
 ## 数式の比較
