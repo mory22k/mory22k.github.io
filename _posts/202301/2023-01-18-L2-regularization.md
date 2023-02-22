@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[回帰4] MAP推定とL2正則化"
+title: "[回帰4] L2正則化"
 categories: note
 description: MAP推定とL2正則化の関係を概説します．
 tags:
@@ -10,8 +10,7 @@ katex: true
 
 事前分布に独立な正規分布を仮定してMAP推定を行なうと，L2正則化の効果が出現する．
 
-- 前回: [最尤推定と最小二乗回帰](/2023/01/17)
-- 次回: [MAP推定とL1正則化](/2023/01/19)
+{% include contents/regression.md %}
 
 ## 線形回帰モデルと最尤推定
 

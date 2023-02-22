@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[回帰5] MAP推定とL1正則化"
+title: "[回帰5] L1正則化"
 categories: note
 description: MAP推定とL1正則化の関係を概説します．
 tags:
@@ -10,8 +10,7 @@ katex: true
 
 事前分布に独立なラプラス分布を仮定してMAP推定を行なうと，L1正則化の効果が出現する．
 
-- 前回: [MAP推定とL2正則化](/2023/01/18)
-- 次回: [線形回帰モデルと正規事前分布](/2023/01/20)
+{% include contents/regression.md %}
 
 ## 線形回帰モデルとMAP推定
 
@@ -132,7 +131,7 @@ $$
 <img src="/assets/2023-01-19-1.png">
 <figcaption>
 
-図1.$y = \exp(-x^2) [tex]
+図1. <tex>$y = \exp(-x^2)$</tex>
 
 </figcaption>
 </figure>
@@ -140,7 +139,7 @@ $$
 <img src="/assets/2023-01-19-2.png">
 <figcaption>
 
-図2.$y = \exp(-|x|) [tex]
+図2. <tex>$y = \exp(-|x|)$</tex>
 
 </figcaption>
 </figure>

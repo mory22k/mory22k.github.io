@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[回帰6] 線形回帰モデルと正規事前分布"
+title: "[回帰6] 正規事前分布を用いた線形回帰"
 categories: note
 description: 多変量正規分布を事前分布とした場合の線形回帰モデルの事後分布を概説します．
 tags:
@@ -10,7 +10,7 @@ katex: true
 
 線形回帰モデルに対して，MAP推定ではなく，事後分布を計算することによるパラメータの推定を考える．
 
-- 前回: [MAP推定とL1正則化](/2023/01/19)
+{% include contents/regression.md %}
 
 ## 線形回帰モデル
 
