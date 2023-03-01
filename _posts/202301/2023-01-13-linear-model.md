@@ -28,13 +28,13 @@ $$
 に含まれる<tex>$\bm x$</tex>と<tex>$y$</tex>の関係が，
 
 $$
-    f(\bm x | \bm w) = \bm x^\mathsf{T} \bm w
+    f_{\bm w}(\bm x) = \sum_{i=1}^n w_i x_i = \bm x^\mathsf{T} \bm w
 $$
 
 を用いて，
 
 $$
-    y = f(\bm x | \bm w) + \varepsilon
+    y = f_{\bm w}(\bm x) + \varepsilon
 $$
 
 によって与えられていると仮定する．このようなモデルを**線形回帰モデル (linear regression model)** という．
@@ -42,10 +42,6 @@ $$
 ## パラメータ
 
 線形回帰モデルには具体的に値が定まっていない定数<tex>$\bm w$</tex>が含まれており，<tex>$\bm w$</tex>に値が与えられることで入出力関係が定まるようになっている．このようなとき，定数<tex>$\bm w$</tex>を**パラメータ (parameter; 母数)** という．
-
-$$
-    f(\bm x | \bm w) \implies \bm w \text{ is a param.}
-$$
 
 線形回帰モデルを**学習する (learn)** または**訓練する (train)** という場合には，「パラメータ<tex>$\bm w$</tex>をデータ<tex>$\mathcal D$</tex>および何らかの知識に基づいて推定する」ことを指す．以降，<tex>$\bm w$</tex>の推定量を<tex>$\hat{\bm w}$</tex>と表すことにする．
 
