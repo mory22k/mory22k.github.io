@@ -87,7 +87,7 @@ $$
 $$
 \begin{aligned}
     \therefore
-    \quad p(\bm w | \bm X, \bm w)
+    \quad p(\bm w | \bm X, \bm y)
     \propto{}&
     \exp \left( - \frac{1}{2} \underbrace{\left(
         \frac{1}{\sigma^2} \|\bm y - \bm X \bm w\|_2^2 + \bm w^\mathsf{T} \bm V_0^{-1} \bm w
@@ -102,7 +102,7 @@ $$
 よって，事後分布は次のようになる．
 
 $$
-    p(\bm w | \bm X, \bm y) \propto \mathcal N_n(\bm w | \bm m_d, \bm V_d)
+    p(\bm w | \bm X, \bm y) = \mathcal N_n(\bm w | \bm m_d, \bm V_d)
 $$
 
 $$
