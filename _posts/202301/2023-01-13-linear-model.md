@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[回帰1] 線形回帰モデル"
+title: "線形回帰モデル"
 categories: note
-description: 線形回帰モデルの尤度関数を導出します．
+description: 回帰モデルの基本である線形回帰モデルを取り扱う．
 tags:
 - regression
 katex: true

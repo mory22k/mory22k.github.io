@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[回帰5] L1正則化"
+title: "線形モデルのLASSO"
 categories: note
 description: MAP推定とL1正則化の関係を概説します．
 tags:
@@ -11,48 +11,6 @@ katex: true
 事前分布に独立なラプラス分布を仮定してMAP推定を行なうと，L1正則化の効果が出現する．
 
 {% include contents/regression.md %}
-
-## 線形回帰モデルとMAP推定
-
-ガウスノイズを仮定した線形回帰モデルの尤度関数
-
-$$
-    p(\bm y | \bm X, \bm w)
-    = \prod_{i=1}^d \mathcal N (y_i | \bm x_i^\mathsf{T} \bm w, \sigma^2)
-$$
-
-に対して独立な正規分布
-
-$$
-\begin{aligned}
-    p(\bm w)
-    &= \prod_{j=1}^{n} \mathcal N (w_j | 0, s^2)
-\end{aligned}
-$$
-
-を仮定すると，<tex>$\bm w$</tex>のMAP推定量は
-
-$$
-\begin{aligned}
-    \hat{\bm w}
-    &=
-    \argmax_{\bm w} p(\bm w | \bm X, \bm y) \\
-    &=
-    \argmin_{\bm w} \left(
-        \frac{1}{2} \|\bm y - \bm X \bm w\|_2^2
-        + \frac{1}{2} \lambda \| \bm w \|_2^2
-    \right)
-\end{aligned}
-$$
-
-すなわち
-
-$$
-    \hat {\bm w}
-    = (\bm X^\mathsf{T} \bm X + \lambda \bm I_n)^{-1} \bm X^\mathsf{T} \bm y
-$$
-
-で与えられる．
 
 ## ラプラス事前分布
 
@@ -75,49 +33,34 @@ $$
 $$
 \begin{aligned}
     \mathcal{La} (w_j | 0, b)
-    &\propto \exp \left(-\frac{1}{b} |w_j| \right) \\
-    &\downarrow
-    \\
+    \propto \exp \left(-\frac{1}{b} |w_j| \right)
+\end{aligned}
+$$
+
+多変量分布に拡張すると次のようになる．
+
+$$
+\begin{aligned}
     p(\bm w)
-    = \prod_{j=1}^{n} \mathcal{La} (w_j | 0, b)
-    &= \exp \left(-\frac{1}{b} \| \bm w \|_1 \right)
+    = \mathcal{La}_n (\bm w | \bm 0, b \bm I_n)
+    = \exp \left(-\frac{1}{b} \| \bm w \|_1 \right)
 \end{aligned}
 $$
 
-すると，対数事後確率は次のように計算できる．
+このとき，事後分布は次の関数に正規化定数が掛けられた形になる．
 
 $$
 \begin{aligned}
-    \log p(\bm w | \bm X, \bm y)
-    &=
-    \log \prod_{i=1}^d \mathcal{N} (y_i | f(\bm x), \sigma^2)
-    + \log \prod_{j=1}^{n} \mathcal{La} (w_j | 0, b) \\
-    &=
-    \sum_{i=1}^d \log \mathcal{N} (y_i | f(\bm x), \sigma^2)
-    + \sum_{j=1}^{n} \log \mathcal{La} (w_j | 0, b) \\
-    &=
-    - \frac{1}{2\sigma^2} \sum_{i=1}^{d} \left(y_i - \bm x_i^\mathsf{T} \bm w \right)^2
-    - \frac{1}{b} \sum_{j=1}^{n} |w_j|
-    + \mathrm{const.}
-    \\
-    &=
-    - \frac{1}{2\sigma^2} \|\bm y - \bm X \bm w\|_2^2
-    - \frac{1}{b} \| \bm w \|_1
-    + \mathrm{const.}
-\end{aligned}
-$$
-
-これにより，MAP推定量は次式で与えられる．
-
-$$
-\begin{aligned}
-    \hat{\bm w}
-    &=
-    \argmax_{\bm w} \log p(\bm w | \bm X, \bm y) \\
-    &=
-    \argmin_{\bm w} \left(
-        \|\bm y - \bm X \bm w\|_2^2
-        + 2 \lambda \| \bm w \|_1
+    p(\bm w | \bm X, \bm y)
+    \propto{}&
+    \mathcal N_d(\bm y | \bm X \bm w, \sigma^2 \bm I_n)
+    \mathcal{La}_n(\bm w | \bm 0, b \bm I_n) \\
+    \propto{}&
+    \exp \left( -\frac{1}{2\sigma^2} \| \bm y - \bm X \bm w \|_2^2 \right)
+    \exp \left( -\frac{1}{b} \| \bm w \|_1 \right) \\
+    \propto{}&
+    \exp \left(
+        -\frac{1}{2\sigma^2} \left( \| \bm y - \bm X \bm w \|_2^2 + 2\lambda \| \bm w \|_1 \right)
     \right)
 \end{aligned}
 $$
@@ -145,7 +88,21 @@ $$
 </figure>
 </div>
 
-こうして得られたMAP推定量は，次のようなL1ノルム罰金項を含む最適化問題の解となる．
+MAP推定量は次式のようになる．
+
+$$
+\begin{aligned}
+    \hat{\bm w}
+    &=
+    \argmax_{\bm w} \log p(\bm w | \bm X, \bm y) \\
+    &=
+    \argmin_{\bm w} \left(
+        \|\bm y - \bm X \bm w\|_2^2 + 2 \lambda \| \bm w \|_1
+    \right)
+\end{aligned}
+$$
+
+これは，次のようなL1ノルム罰金項を含む最適化問題の解である．
 
 $$
 \begin{aligned}
@@ -161,6 +118,6 @@ $$
 \end{aligned}
 $$
 
-最小二乗回帰や，L2ノルム罰金項を伴う最小二乗回帰 (Ridge回帰) は解析的にパラメータを計算することができた．しかし上式のように，L1ノルム罰金項を含む場合は目的関数に絶対値が含まれるためかなり難しい．
+ラプラス分布は図2のようにゼロにおいて尖った形をしている．これはパラメータがゼロとなりやすいことを示唆しており，実際，L1ノルム罰金項を追加してパラメータを推定すると，ゼロとなる値が増えやすいことが知られている．このことから，L1ノルム罰金項を含む推定方法をしばしば**LASSO (least absolute shrinkage and selection operator; 最小絶対縮小・選択作用素)** と呼ぶ．LASSOを用いた回帰は俗にLASSO回帰などと呼ばれる．
 
-ラプラス分布は図2のようにゼロにおいて尖った形をしている．これはパラメータがゼロとなりやすいことを示唆しており，実際，L1ノルム罰金項を追加してパラメータを推定すると，ゼロとなる値が増えやすいことが知られている．このことから，L1ノルム罰金項を含む回帰は**LASSO (least absolute shrinkage and selection operator; 最小絶対縮小・選択作用素)** と呼ばれる．
+なお，最小二乗法やRidge回帰は解析的にパラメータを計算することができたのに対し，L1ノルム罰金項を含む場合は目的関数に絶対値が含まれるためかなり難しい．
