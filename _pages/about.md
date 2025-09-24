@@ -7,15 +7,19 @@ redirect_from:
   - /about.html
 ---
 
-<u><span style="font-size: 400%; font-weight:800;">圭祐</span></u> - ✗ 桂, 啓, 佳 / 輔, 佐, 佑
+Born on May 15, 2000 (Heisei <big>**12**</big>, Month <big>**5**</big>, Day <big>**15**</big>), my kanji name is composed of:
 
-Born on May 15, 2000 (Heisei **12**, Month **5**, Day **15**)
+- 森 = <big>**12**</big> strokes
+- 田 = <big>**5**</big> strokes
+- 圭祐 = <big>**15**</big> strokes
 
-- 森 = **12** strokes
-- 田 = **5** strokes
-- 圭祐 = **15** strokes
+<br>
+<br>
+<br>
 
-I am a PhD student at Ohzeki Group in Graduate School of Information Sciences, Tohoku University.
+---
+
+I am a PhD student at [Ohzeki Group](https://altema.is.tohoku.ac.jp/~mohzeki/) in Graduate School of Information Sciences, [Tohoku University](https://www.tohoku.ac.jp/).
 
 `keisuke.morita.r3 _at_ dc.tohoku.ac.jp`
 
@@ -39,7 +43,7 @@ My research interests include quantum annealing, optimization, Bayesian statisti
 
 ### International Conference Presentations 国際会議
 - **Keisuke Morita** and Masayuki Ohzeki. [**Poster**] \
-  *Statistical-Mechanical Analysis of Compressed Sensing for Ising Hamiltonian Estimation with the Horseshoe Prior*.
+  *Statistical-Mechanical Analysis of Compressed Sensing for Ising Hamiltonian Estimation with the Horseshoe Prior*.\
   Adiabatic Quantum Computing (AQC 2025), The University of British Columbia Vancouver Campus, Canada, June 2025.
 - **Keisuke Morita** and Masayuki Ohzeki. [**Poster**] \
   *Bayesian Optimization using Factorization Machines and Annealing*.\
@@ -47,7 +51,7 @@ My research interests include quantum annealing, optimization, Bayesian statisti
 - **Keisuke Morita**, Yoshihiko Nishikawa, Masayuki Ohzeki. [**Poster**] \
   *Fast algorithm for Bayesian optimization of high-dimensional combinatorial problems*.\
   Adiabatic Quantum Computing (AQC 2024), Glasgow, United Kingdom, June 2024.
-- **Keisuke Morita**, Yoshihiko Nishikawa, Masayuki Ohzeki [**Oral**].
+- **Keisuke Morita**, Yoshihiko Nishikawa, Masayuki Ohzeki [**Oral**].\
   *A Simple Post-Processing Method for Improving Bayesian Optimization of Combinatorial Problems*.\
   28th International Conference on Statistical Physics (Statphys28), Tokyo, Japan, August 2023.
 
