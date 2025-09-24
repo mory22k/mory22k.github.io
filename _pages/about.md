@@ -1,56 +1,73 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Keisuke MORITA / 森田 圭祐"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+<u><span style="font-size: 400%; font-weight:800;">圭祐</span></u> - ✗ 桂, 啓, 佳 / 輔, 佐, 佑
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+Born on May 15, 2000 (Heisei **12**, Month **5**, Day **15**)
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+- 森 = **12** strokes
+- 田 = **5** strokes
+- 圭祐 = **15** strokes
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+I am a PhD student at Ohzeki Group in Graduate School of Information Sciences, Tohoku University.
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+`keisuke.morita.r3 _at_ dc.tohoku.ac.jp`
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+My research interests include quantum annealing, optimization, Bayesian statistics, statistical learning theory and their applications.
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+<h2 id="papers">Papers 学術原著論文</h2>
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+### 2025
+- Makoto Otsuka, Kento Kodama, **Keisuke Morita**, Masayuki Ohzeki.\
+  *Filtering out mislabeled training instances using black-box optimization and quantum annealing*.\
+  Scientific Reports, **Accepted. Coming soon!**\
+  [arXiv:2501.06916](https://arxiv.org/abs/2501.06916)
 
-**Markdown generator**
+### 2023
+- **Keisuke Morita**, Yoshihiko Nishikawa, Masayuki Ohzeki.\
+  *Random Postprocessing for Combinatorial Bayesian Optimization*.\
+  Journal of the Physical Society of Japan **92**, 123801 (2023)\
+  [arXiv:2309.02842](https://arxiv.org/abs/2309.02842)
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
+<h2 id="presentations">Presentations 学会発表</h2>
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+### International Conference Presentations 国際会議
+- **Keisuke Morita** and Masayuki Ohzeki. [**Poster**] \
+  *Statistical-Mechanical Analysis of Compressed Sensing for Ising Hamiltonian Estimation with the Horseshoe Prior*.
+  Adiabatic Quantum Computing (AQC 2025), The University of British Columbia Vancouver Campus, Canada, June 2025.
+- **Keisuke Morita** and Masayuki Ohzeki. [**Poster**] \
+  *Bayesian Optimization using Factorization Machines and Annealing*.\
+  International Network on Quantum Annealing (INQA Conference 2024), Tokyo, Japan, October 2024.
+- **Keisuke Morita**, Yoshihiko Nishikawa, Masayuki Ohzeki. [**Poster**] \
+  *Fast algorithm for Bayesian optimization of high-dimensional combinatorial problems*.\
+  Adiabatic Quantum Computing (AQC 2024), Glasgow, United Kingdom, June 2024.
+- **Keisuke Morita**, Yoshihiko Nishikawa, Masayuki Ohzeki [**Oral**].
+  *A Simple Post-Processing Method for Improving Bayesian Optimization of Combinatorial Problems*.\
+  28th International Conference on Statistical Physics (Statphys28), Tokyo, Japan, August 2023.
 
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
+### Domestic Conference Presentations 国内会議
+- **森田圭祐**, 大関真之 [**口頭**].\
+  能動学習に基づく線形回帰の統計力学的解析.\
+  日本物理学会第80回年次大会, 東広島市, 2025年9月.
+- **森田圭祐** [**口頭, 招待講演**].\
+  アニーリングマシンを用いたブラックボックス最適化の新たな探索手法の検討.\
+  第3回量子アニーリング及び関連技術に関する研究会, 東京, 2025年2月.
+- **森田圭祐**, 西川宜彦, 大関真之 [**口頭**].\
+  オンライン機械学習手法を用いた高次元ブラックボックス最適化について.\
+  日本物理学会第79回年次大会, 札幌市, 2024年9月.
+- **森田圭祐**, 大関真之 [**口頭**].\
+  Factorization Machines を用いたベイズ最適化の性能評価.\
+  日本物理学会2024年春季大会, オンライン, 2024年3月.
+- **森田圭祐**, 西川宜彦, 大関真之 [**ポスター**].\
+  組合せ構造に対するベイズ最適化の後処理の数値的検証.\
+  第26回情報論的学習理論ワークショップ (IBIS2023), 北九州市, 2023年10月.
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+## Achievements
+### 2024
+- Early completion of a master's degree program, Tohoku University. 博士課程前期2年の課程を1年で早期修了, 東北大学.

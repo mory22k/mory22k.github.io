@@ -9,56 +9,58 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+## Academic degrees
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+- (expected) Ph.D in Information Sciences / 博士（情報科学）, Tohoku University
+- M.S. in Information Sciences / 修士（情報科学）, Tohoku University, 2024
+- B.S. in Engineering / 学士（工学）, Tohoku University, 2023
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+## Education history
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+- 2024: **Early completion a master's degree program**
+  - Tohoku University, Sendai, Japan
+- 2023: **Completion of a bachelor's degree program**
+  - Tohoku University, Sendai, Japan
+- 2019: **Completion of upper secondary education**
+  - Morioka Daiichi High School, Morioka, Japan / 岩手県立盛岡第一高等学校
+
+## Employment history
+- Summer 2024 - Fall 2025: **Permanent Employee** (24 hours per week)
+  - Sigma-i Co., Ltd. / 株式会社シグマアイ
+
+- 2023: **Teaching Assistant**
+  - Graduate School of Information Sciences, Tohoku University
+  - Course: Mathematical Informatics as a Foundation of Information Science
+
+- 2023: **Teaching Assistant**
+  - School of Engineering, Tohoku University
+  - Courses: Applied Mathematics A / Applied Mathematics B
+- 2022 - Present: **Administrative Assistant** / **Research Assistant**
+  - Graduate School of Information Sciences, Tohoku University
+  - T-QARD (Quantum Applications Research and Development, Tohoku University)
   
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+## Skills
 
-Publications
-======
+* Python
+* Rust
+* LaTeX
+
+<!--
+## Publications
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
-======
+## Talks
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
   
-Teaching
-======
+## Teaching
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Currently signed in to 43 different slack teams -->
