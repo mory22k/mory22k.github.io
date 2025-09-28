@@ -15,7 +15,7 @@ redirect_from:
 - M.S. in Information Sciences / 修士（情報科学）, Tohoku University, 2024
 - B.S. in Engineering / 学士（工学）, Tohoku University, 2023
 
-## Education history
+## Education background
 
 - 2024: **Early completion a master's degree program**
   - Tohoku University, Sendai, Japan
