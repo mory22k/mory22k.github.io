@@ -17,28 +17,25 @@ redirect_from:
 
 ## Education background
 
-- 2024: **Early completion a master's degree program**
+- 2024: **Early completion of master's degree program in information sciences**
   - Tohoku University, Sendai, Japan
-- 2023: **Completion of a bachelor's degree program**
+- 2023: **Completion of a bachelor's degree program in information engineering**
   - Tohoku University, Sendai, Japan
 - 2019: **Completion of upper secondary education**
   - Morioka Daiichi High School, Morioka, Japan / 岩手県立盛岡第一高等学校
 
-## Employment history
-- Summer 2024 - Fall 2025: **Permanent Employee** (24 hours per week)
+## Professional experience
+- June 2024 - Present: **Research Scientist** (Permanent / 24 hours per week)
   - Sigma-i Co., Ltd. / 株式会社シグマアイ
-
-- 2023: **Teaching Assistant**
-  - Graduate School of Information Sciences, Tohoku University
-  - Course: Mathematical Informatics as a Foundation of Information Science
 
 - 2023: **Teaching Assistant**
   - School of Engineering, Tohoku University
   - Courses: Applied Mathematics A / Applied Mathematics B
+
 - 2022 - Present: **Administrative Assistant** / **Research Assistant**
   - Graduate School of Information Sciences, Tohoku University
   - T-QARD (Quantum Applications Research and Development, Tohoku University)
-  
+
 ## Skills
 
 * Python
