@@ -30,13 +30,13 @@ My research interests include quantum annealing, optimization, Bayesian statisti
 ### 2025
 - Makoto Otsuka, Kento Kodama, **Keisuke Morita**, Masayuki Ohzeki.\
   *Filtering out mislabeled training instances using black-box optimization and quantum annealing*.\
-  Scientific Reports, **Accepted. Coming soon!**\
+  Scientific Reports *15*, 37892 (2025), [doi.org/10.1038/s41598-025-21686-z](https://doi.org/10.1038/s41598-025-21686-z)\
   [arXiv:2501.06916](https://arxiv.org/abs/2501.06916)
 
 ### 2023
 - **Keisuke Morita**, Yoshihiko Nishikawa, Masayuki Ohzeki.\
   *Random Postprocessing for Combinatorial Bayesian Optimization*.\
-  Journal of the Physical Society of Japan **92**, 123801 (2023)\
+  Journal of the Physical Society of Japan **92**, 123801 (2023), [doi.org/10.7566/JPSJ.92.123801](https://doi.org/10.7566/JPSJ.92.123801)\
   [arXiv:2309.02842](https://arxiv.org/abs/2309.02842)
 
 <h2 id="presentations">Presentations 学会発表</h2>
