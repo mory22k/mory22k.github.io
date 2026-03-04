@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Born on May 15, 2000 (Heisei <big>**12**</big>, Month <big>**5**</big>, Day <big>**15**</big>), my kanji name is composed of:
+Born on May 15, 2000 (Heisei <big>**12**</big>, Month: <big>**5**</big>, Day: <big>**15**</big>), my kanji name is composed of:
 
 - 森 = <big>**12**</big> strokes
 - 田 = <big>**5**</big> strokes
@@ -19,29 +19,34 @@ Born on May 15, 2000 (Heisei <big>**12**</big>, Month <big>**5**</big>, Day <big
 
 ---
 
-I am a PhD student at [Ohzeki Group](https://altema.is.tohoku.ac.jp/~mohzeki/) in Graduate School of Information Sciences, [Tohoku University](https://www.tohoku.ac.jp/).
+I am a PhD student in [Ohzeki Group](https://altema.is.tohoku.ac.jp/~mohzeki/), Graduate School of Information Sciences, Tohoku University.
 
 `keisuke.morita.r3 _at_ dc.tohoku.ac.jp`
 
-My research interests include quantum annealing, optimization, Bayesian statistics, statistical learning theory and their applications.
+My research interests include quantum annealing, optimization, Bayesian statistics, statistical inference theory and their applications.
 
-<h2 id="papers">Papers 学術原著論文</h2>
+<!-- ## Papers 学術原著論文 -->
+<h2 id="papers">Journal Papers / 学術原著論文</h2>
 
 ### 2025
+
 - Makoto Otsuka, Kento Kodama, **Keisuke Morita**, Masayuki Ohzeki.\
   *Filtering out mislabeled training instances using black-box optimization and quantum annealing*.\
   Scientific Reports *15*, 37892 (2025), [doi.org/10.1038/s41598-025-21686-z](https://doi.org/10.1038/s41598-025-21686-z)\
   [arXiv:2501.06916](https://arxiv.org/abs/2501.06916)
 
 ### 2023
+
 - **Keisuke Morita**, Yoshihiko Nishikawa, Masayuki Ohzeki.\
   *Random Postprocessing for Combinatorial Bayesian Optimization*.\
   Journal of the Physical Society of Japan **92**, 123801 (2023), [doi.org/10.7566/JPSJ.92.123801](https://doi.org/10.7566/JPSJ.92.123801)\
   [arXiv:2309.02842](https://arxiv.org/abs/2309.02842)
 
-<h2 id="presentations">Presentations 学会発表</h2>
+<!-- ## Presentations -->
+<h2 id="presentations">Presentations</h2>
 
-### International Conference Presentations 国際会議
+### International Conference Presentations / 国際会議
+
 - **Keisuke Morita** and Masayuki Ohzeki. [**Poster**] \
   *Statistical-Mechanical Analysis of Compressed Sensing for Ising Hamiltonian Estimation with the Horseshoe Prior*.\
   Adiabatic Quantum Computing (AQC 2025), The University of British Columbia Vancouver Campus, Canada, June 2025.
@@ -55,7 +60,8 @@ My research interests include quantum annealing, optimization, Bayesian statisti
   *A Simple Post-Processing Method for Improving Bayesian Optimization of Combinatorial Problems*.\
   28th International Conference on Statistical Physics (Statphys28), Tokyo, Japan, August 2023.
 
-### Domestic Conference Presentations 国内会議
+### Domestic Conference Presentations / 国内会議
+
 - **森田圭祐**, 大関真之 [**口頭**].\
   能動学習に基づく線形回帰の統計力学的解析.\
   日本物理学会第80回年次大会, 東広島市, 2025年9月.
@@ -72,6 +78,13 @@ My research interests include quantum annealing, optimization, Bayesian statisti
   組合せ構造に対するベイズ最適化の後処理の数値的検証.\
   第26回情報論的学習理論ワークショップ (IBIS2023), 北九州市, 2023年10月.
 
-## Achievements
+## Contribution Activities / 学術貢献活動
+
+- **Quantum Infinity for You in Italy: From HPC to Quantum Computing** (QI4U in Italy). Sapienza University of Rome, Rome, Italy, February 2-4, 2026.
+- **Quantum Infinity for You, The First Session with You, in Kumamoto** (QI4U in Kumamoto). Kumamoto University, Kumamoto, Japan, March 4-6, 2024.
+
+## Achievements / 実績
+
 ### 2024
+
 - Early completion of a master's degree program, Tohoku University. 博士課程前期2年の課程を1年で早期修了, 東北大学.
