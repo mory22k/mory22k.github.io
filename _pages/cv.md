@@ -25,7 +25,8 @@ redirect_from:
   - Morioka Daiichi High School, Morioka, Japan / 岩手県立盛岡第一高等学校
 
 ## Professional experience
-- June 2024 - Present: **Research Scientist** (Permanent / 24 hours per week)
+
+- June 2024 - October 2025: **Research Scientist** (Permanent / 24 hours per week)
   - Sigma-i Co., Ltd. / 株式会社シグマアイ
 
 - 2023: **Teaching Assistant**
@@ -38,9 +39,9 @@ redirect_from:
 
 ## Skills
 
-* Python
-* Rust
-* LaTeX
+- Python
+- Rust
+- LaTeX
 
 <!--
 ## Publications
