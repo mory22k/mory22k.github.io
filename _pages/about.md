@@ -28,6 +28,12 @@ My research interests include quantum annealing, optimization, Bayesian statisti
 <!-- ## Papers 学術原著論文 -->
 <h2 id="papers">Journal Papers / 学術原著論文</h2>
 
+### 2026
+
+- **Keisuke Morita**, Federico Ricci-Tersenghi, Masayuki Ohzeki.\
+  *Phase transition in compressed sensing using log-sum penalty and adaptive smoothing*.\
+  [arXiv:2604.13511](https://arxiv.org/abs/2604.13511)
+
 ### 2025
 
 - Makoto Otsuka, Kento Kodama, **Keisuke Morita**, Masayuki Ohzeki.\
