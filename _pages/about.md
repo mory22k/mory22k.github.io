@@ -73,6 +73,10 @@ My research interests include quantum annealing, optimization, Bayesian statisti
 
 ### Domestic Conference Presentations / 国内会議
 
+- **森田圭祐**, 大関真之 [**口頭**]. **優秀発表賞受賞**.\
+  対数和ペナルティを用いた圧縮センシングによる信号復元.\
+  最適化のモデリングとアルゴリズム：未来を担う若手研究者の集い 2026, つくば, 2026年5月.
+  <https://shotaroyagishita.github.io/matcha/>
 - **森田圭祐**, 大関真之 [**口頭**].\
   能動学習に基づく線形回帰の統計力学的解析.\
   日本物理学会第80回年次大会, 東広島市, 2025年9月.
@@ -96,6 +100,7 @@ My research interests include quantum annealing, optimization, Bayesian statisti
 
 ## Achievements / 実績
 
-### 2024
-
-- Early completion of a master's degree program, Tohoku University. 博士課程前期2年の課程を1年で早期修了, 東北大学.
+- 優秀発表賞, 最適化のモデリングとアルゴリズム：未来を担う若手研究者の集い 2026, つくば, 2026年5月.
+  発表題目: 対数和ペナルティを用いた圧縮センシングによる信号復元.
+- Early completion of a master's degree program, Tohoku University.\
+  博士課程前期2年の課程を1年で早期修了, 東北大学.
