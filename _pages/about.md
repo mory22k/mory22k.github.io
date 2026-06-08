@@ -25,14 +25,19 @@ I am a PhD student in [Ohzeki Group](https://altema.is.tohoku.ac.jp/~mohzeki/), 
 
 My research interests include quantum annealing, optimization, Bayesian statistics, statistical inference theory and their applications.
 
-<!-- ## Papers 学術原著論文 -->
-<h2 id="papers">Journal Papers / 学術原著論文</h2>
+<h2 id="papers">Preprints / プレプリント</h2>
 
 ### 2026
+
+- **Keisuke Morita**, Masayuki Ohzeki.\
+  *Sparse Signal Recovery using Log-Sum Regularization and Adaptive Smoothing*.\
+  [arXiv:2605.10626](https://arxiv.org/abs/2605.10626)
 
 - **Keisuke Morita**, Federico Ricci-Tersenghi, Masayuki Ohzeki.\
   *Phase transition in compressed sensing using log-sum penalty and adaptive smoothing*.\
   [arXiv:2604.13511](https://arxiv.org/abs/2604.13511)
+
+## Journal Papers / 学術原著論文
 
 ### 2025
 
