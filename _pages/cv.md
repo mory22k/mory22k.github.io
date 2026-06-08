@@ -18,24 +18,28 @@ redirect_from:
 ## Education background
 
 - 2024: **Early completion of master's degree program in information sciences**
-  - Tohoku University, Sendai, Japan
+  - Graduate School of Information Sciences, Tohoku University, Sendai, Japan (東北大学)
 - 2023: **Completion of a bachelor's degree program in information engineering**
-  - Tohoku University, Sendai, Japan
+  - School of Engineering, Tohoku University, Sendai, Japan (東北大学)
 - 2019: **Completion of upper secondary education**
-  - Morioka Daiichi High School, Morioka, Japan / 岩手県立盛岡第一高等学校
+  - Morioka Daiichi High School, Morioka, Japan (盛岡第一高等学校)
 
 ## Professional experience
 
-- June 2024 - October 2025: **Research Scientist** (Permanent / 24 hours per week)
-  - Sigma-i Co., Ltd. / 株式会社シグマアイ
-
-- 2023: **Teaching Assistant**
-  - School of Engineering, Tohoku University
-  - Courses: Applied Mathematics A / Applied Mathematics B
-
-- 2022 - Present: **Administrative Assistant** / **Research Assistant**
+- 2025: **Teaching Assistant** (Part-time)
   - Graduate School of Information Sciences, Tohoku University
-  - T-QARD (Quantum Applications Research and Development, Tohoku University)
+  - Course: 情報基礎科学としての数理情報学
+
+- June 2024 - October 2025: **Researcher and Developer, as well as Programmer** (Permanent)
+  - Sigma-i Co., Ltd. (株式会社シグマアイ)
+
+- 2023: **Teaching Assistant** (Part-time)
+  - School of Engineering, Tohoku University
+  - Courses: Applied Mathematics A (応用数学A) / Applied Mathematics B (応用数学B)
+
+- August 2022 - June 2026: **Administrative Assistant** / **Research Assistant**
+  - Center for Quantum Applications Research and Development, Graduate School of Information Sciences, Tohoku University
+  - T-QARD Crews
 
 ## Skills
 
