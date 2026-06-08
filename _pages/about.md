@@ -100,7 +100,8 @@ My research interests include quantum annealing, optimization, Bayesian statisti
 
 ## Achievements / 実績
 
-- 優秀発表賞, 最適化のモデリングとアルゴリズム：未来を担う若手研究者の集い 2026, つくば, 2026年5月.
+- 優秀発表賞.\
+  最適化のモデリングとアルゴリズム：未来を担う若手研究者の集い 2026, つくば, 2026年5月.\
   発表題目: 対数和ペナルティを用いた圧縮センシングによる信号復元.
-- Early completion of a master's degree program, Tohoku University.\
-  博士課程前期2年の課程を1年で早期修了, 東北大学.
+- 博士課程前期2年の課程を1年で早期修了.\
+  東北大学大学院情報科学研究科, 2024年3月.\
