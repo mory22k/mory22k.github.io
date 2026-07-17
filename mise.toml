@@ -1,0 +1,19 @@
+[tools]
+node = "22"
+python = "3.14"
+
+[tasks.setup]
+description = "開発用パッケージをインストールする"
+run = "npm install"
+
+[tasks.build]
+description = "公開用サイトを_siteディレクトリへ生成する"
+run = "npm run build"
+
+[tasks.watch]
+description = "サイトとSCSSの変更を監視する"
+run = "npm run dev"
+
+[tasks.serve]
+description = "ローカル確認用サーバーを起動して変更を監視する"
+run = "npm run dev"

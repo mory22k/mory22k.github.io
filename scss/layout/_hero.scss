@@ -1,0 +1,112 @@
+@use "../abstracts/tokens" as tokens;
+
+.hero {
+  width: min(calc(100% - 40px), var(--content-width));
+  margin-inline: auto;
+}
+
+.researcher-hero {
+  min-height: min(720px, calc(100vh - 88px));
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: clamp(48px, 8vw, 110px);
+  align-items: center;
+  padding-block: 90px;
+}
+
+.hero-main {
+  h1 {
+    margin-bottom: 6px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .button {
+    margin-top: 20px;
+  }
+}
+
+.name-en {
+  margin-bottom: 32px;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+}
+
+.affiliation {
+  font-size: 1.08rem;
+}
+
+.researcher-summary {
+  margin: 0;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--color-line);
+  border-radius: 18px;
+
+  div + div {
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid var(--color-line);
+  }
+
+  dt {
+    margin-bottom: 6px;
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin: 0;
+    font-size: 0.93rem;
+  }
+}
+
+.email-address {
+  white-space: nowrap;
+}
+
+.email-at {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.14em;
+  margin-inline: 0.04em;
+  mix-blend-mode: multiply;
+}
+
+.page-header {
+  width: min(calc(100% - 40px), var(--content-width));
+  margin-inline: auto;
+  padding-block: clamp(90px, 13vw, 170px) clamp(70px, 10vw, 130px);
+
+  h1 {
+    margin-bottom: 18px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+  }
+
+  > p:last-child {
+    max-width: 640px;
+    margin-bottom: 0;
+    font-size: 1.05rem;
+  }
+}
+
+@include tokens.mobile {
+  .researcher-hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding-block: 72px;
+  }
+
+  .researcher-summary {
+    padding: 24px;
+  }
+}

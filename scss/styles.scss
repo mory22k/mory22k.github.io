@@ -1,0 +1,10 @@
+// このファイルは読み込み順だけを管理します。
+// 実際のスタイルは各パーシャルへ追加してください。
+@use "base/reset";
+@use "base/global";
+@use "components/button";
+@use "components/records";
+@use "layout/header";
+@use "layout/hero";
+@use "layout/sections";
+@use "layout/footer";

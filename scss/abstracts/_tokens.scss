@@ -1,0 +1,17 @@
+// サイト全体で共有する設計値です。
+$breakpoint-mobile: 720px;
+$content-width: 1120px;
+$wide-content-width: 1280px;
+$page-gutter: 20px;
+
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}

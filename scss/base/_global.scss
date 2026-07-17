@@ -1,0 +1,65 @@
+@use "../abstracts/tokens" as tokens;
+
+:root {
+  --color-ink: #17211b;
+  --color-paper: #f4f1e8;
+  --color-accent: #e95d3c;
+  --color-green: #244b38;
+  --color-line: rgba(23, 33, 27, 0.2);
+  --color-muted: rgba(23, 33, 27, 0.55);
+  --content-width: #{tokens.$content-width};
+  --font-sans: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  --font-serif: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  --font-mono: "SFMono-Regular", Consolas, monospace;
+}
+
+body {
+  color: var(--color-ink);
+  background: var(--color-paper);
+  font-family: var(--font-sans);
+  line-height: 1.8;
+}
+
+h1 {
+  max-width: 900px;
+  margin-bottom: 30px;
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+h3 {
+  line-height: 1.4;
+}
+
+strong {
+  font-weight: 750;
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 0 18px;
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.section-index {
+  margin: 0 0 12px;
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+@include tokens.reduced-motion {
+  html {
+    scroll-behavior: auto;
+  }
+}

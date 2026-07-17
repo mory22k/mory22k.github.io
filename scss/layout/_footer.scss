@@ -1,0 +1,29 @@
+@use "../abstracts/tokens" as tokens;
+
+.site-footer {
+  width: min(calc(100% - 40px), var(--content-width));
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: auto;
+  font-size: 0.85rem;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+  }
+}
+
+@include tokens.mobile {
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+}

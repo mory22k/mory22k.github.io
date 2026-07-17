@@ -1,0 +1,56 @@
+@use "../abstracts/tokens" as tokens;
+
+.record-list,
+.publication-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 28px;
+    padding-block: 22px;
+    border-top: 1px solid var(--color-line);
+  }
+
+  time {
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.publication-list {
+  counter-reset: publication;
+
+  li {
+    position: relative;
+    padding-right: 48px;
+    counter-increment: publication;
+
+    &::after {
+      content: counter(publication, decimal-leading-zero);
+      position: absolute;
+      top: 20px;
+      right: 0;
+      color: var(--color-muted);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+    }
+  }
+}
+
+@include tokens.mobile {
+  .record-list li,
+  .publication-list li {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
