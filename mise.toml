@@ -1,6 +1,5 @@
 [tools]
-node = "22"
-python = "3.14"
+node = "latest"
 
 [tasks.setup]
 description = "開発用パッケージをインストールする"
