@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
   gap: clamp(48px, 8vw, 110px);
-  align-items: center;
+  align-items: start;
   padding-block: 90px;
 }
 
@@ -78,6 +78,28 @@
   vertical-align: -0.14em;
   margin-inline: 0.04em;
   mix-blend-mode: multiply;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    color: var(--color-ink);
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-underline-offset: 0.25em;
+
+    &::after {
+      content: " ↗";
+      color: var(--color-accent);
+    }
+  }
 }
 
 .page-header {
