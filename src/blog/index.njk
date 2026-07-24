@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+title: 森田 圭祐 | 記事置き場
+description: 森田圭祐の記事置き場。研究、技術、日々の考察を記録しています。
+currentPage: blog
+---
+
+<main id="top">
+  <header class="page-header blog-page-header">
+    <p class="eyebrow">DAILY LOG</p>
+    <h1>記事置き場</h1>
+    <p>研究や技術について考えたこと、日々の記録を綴ります。</p>
+  </header>
+
+  <section class="blog-index" aria-labelledby="articles-title">
+    <div class="blog-index-heading">
+      <p class="section-index">ARTICLES</p>
+      <h2 id="articles-title">記事一覧</h2>
+    </div>
+
+    {% if collections.blogPosts.length %}
+      <ol class="blog-list">
+        {% for post in collections.blogPosts %}
+          <li>
+            <article class="blog-card">
+              <div class="blog-card-meta">
+                <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+                {% if post.data.topics %}
+                  <ul class="topic-tags" aria-label="記事のトピック">
+                    {% for topic in post.data.topics %}<li>{{ topic }}</li>{% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+              <h3><a href="{{ post.url }}">{{ post.data.postTitle }}</a></h3>
+              {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
+              <a class="blog-card-link" href="{{ post.url }}" aria-label="「{{ post.data.postTitle }}」を読む">記事を読む <span aria-hidden="true">→</span></a>
+            </article>
+          </li>
+        {% endfor %}
+      </ol>
+    {% else %}
+      <p class="blog-empty">記事はまだありません。</p>
+    {% endif %}
+  </section>
+</main>

@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+currentPage: blog
+---
+{%- set postRootPath = page.url | relativeRoot -%}
+
+<main id="top">
+  <article class="blog-post">
+    <header class="post-header">
+      <a class="post-back-link" href="{{ postRootPath }}blog/">← 記事置き場一覧</a>
+      <p class="eyebrow">DAILY LOG</p>
+      <h1>{{ postTitle }}</h1>
+      <div class="post-meta">
+        <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+        {% if topics %}
+          <ul class="topic-tags" aria-label="記事のトピック">
+            {% for topic in topics %}<li>{{ topic }}</li>{% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </header>
+
+    <div class="post-content">
+      {{ content | safe }}
+    </div>
+
+    <footer class="post-footer">
+      <a class="text-link" href="{{ postRootPath }}blog/">← 記事置き場一覧へ戻る</a>
+    </footer>
+  </article>
+</main>
