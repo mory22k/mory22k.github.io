@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npm run build:styles && eleventy",
     "build:styles": "sass scss/styles.scss styles.css --style=expanded --no-source-map",
-    "dev": "concurrently --kill-others \"sass --watch scss/styles.scss:styles.css --style=expanded --no-source-map\" \"eleventy --serve\""
+    "dev": "concurrently --kill-others \"sass --watch scss/styles.scss:styles.css --style=expanded --no-source-map\" \"eleventy --serve\"",
+    "test": "node --test"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
