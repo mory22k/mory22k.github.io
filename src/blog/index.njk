@@ -18,6 +18,21 @@ currentPage: blog
       <h2 id="articles-title">記事一覧</h2>
     </div>
 
+    {% if collections.blogCategories.length %}
+      <nav class="category-navigation" aria-label="カテゴリ別の記事一覧">
+        <span>カテゴリ</span>
+        <ul>
+          {% for category in collections.blogCategories %}
+            <li>
+              <a href="{{ category.name | categoryUrl }}">
+                {{ category.name }} <span aria-label="{{ category.posts.length }}件">({{ category.posts.length }})</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+
     {% if collections.blogPosts.length %}
       <ol class="blog-list">
         {% for post in collections.blogPosts %}
@@ -25,9 +40,11 @@ currentPage: blog
             <article class="blog-card">
               <div class="blog-card-meta">
                 <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-                {% if post.data.topics %}
-                  <ul class="topic-tags" aria-label="記事のトピック">
-                    {% for topic in post.data.topics %}<li>{{ topic }}</li>{% endfor %}
+                {% if post.data.categories %}
+                  <ul class="category-tags" aria-label="記事のカテゴリ">
+                    {% for category in post.data.categories %}
+                      <li><a href="{{ category | categoryUrl }}">{{ category }}</a></li>
+                    {% endfor %}
                   </ul>
                 {% endif %}
               </div>

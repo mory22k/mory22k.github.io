@@ -3,7 +3,7 @@ title: 記事置き場を始めました | 森田 圭祐
 postTitle: 記事置き場を始めました
 description: この記事置き場で発信していく内容についてご紹介します。
 date: 2026-07-18
-topics:
+categories:
   - お知らせ
 ---
 

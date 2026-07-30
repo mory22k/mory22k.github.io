@@ -1,5 +1,33 @@
 import markdownIt from "markdown-it";
 
+const categorySlugOverrides = new Map([
+  ["お知らせ", "news"],
+  ["技術メモ", "technical-notes"],
+]);
+
+export function categorySlug(category) {
+  const categoryName = String(category ?? "").trim();
+
+  if (categorySlugOverrides.has(categoryName)) {
+    return categorySlugOverrides.get(categoryName);
+  }
+
+  return (
+    categoryName
+      .normalize("NFKC")
+      .toLocaleLowerCase("ja-JP")
+      .replace(/[^\p{Letter}\p{Number}]+/gu, "-")
+      .replace(/^-+|-+$/g, "") || "uncategorized"
+  );
+}
+
+function getBlogPosts(collectionApi) {
+  return collectionApi
+    .getFilteredByTag("blog")
+    .filter((post) => post.data.draft !== true)
+    .sort((a, b) => b.date - a.date);
+}
+
 export function preserveLatexMath(md) {
   md.block.ruler.before(
     "fence",
@@ -254,6 +282,11 @@ export default function (eleventyConfig) {
     new Date(date).toISOString().slice(0, 10),
   );
 
+  eleventyConfig.addFilter(
+    "categoryUrl",
+    (category) => `/blog/categories/${categorySlug(category)}/`,
+  );
+
   const markdownLibrary = markdownIt({
     html: true,
     linkify: true,
@@ -265,12 +298,29 @@ export default function (eleventyConfig) {
 
   eleventyConfig.setLibrary("md", markdownLibrary);
 
-  eleventyConfig.addCollection("blogPosts", (collectionApi) =>
-    collectionApi
-      .getFilteredByTag("blog")
-      .filter((post) => post.data.draft !== true)
-      .sort((a, b) => b.date - a.date),
-  );
+  eleventyConfig.addCollection("blogPosts", getBlogPosts);
+
+  eleventyConfig.addCollection("blogCategories", (collectionApi) => {
+    const categories = new Map();
+
+    for (const post of getBlogPosts(collectionApi)) {
+      for (const category of post.data.categories ?? []) {
+        if (!categories.has(category)) {
+          categories.set(category, {
+            name: category,
+            slug: categorySlug(category),
+            posts: [],
+          });
+        }
+
+        categories.get(category).posts.push(post);
+      }
+    }
+
+    return [...categories.values()].sort((a, b) =>
+      a.name.localeCompare(b.name, "ja"),
+    );
+  });
 
   eleventyConfig.addPassthroughCopy({ "assets": "assets" });
   eleventyConfig.addPassthroughCopy(

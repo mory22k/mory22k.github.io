@@ -12,9 +12,11 @@ currentPage: blog
       <h1>{{ postTitle }}</h1>
       <div class="post-meta">
         <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
-        {% if topics %}
-          <ul class="topic-tags" aria-label="記事のトピック">
-            {% for topic in topics %}<li>{{ topic }}</li>{% endfor %}
+        {% if categories %}
+          <ul class="category-tags" aria-label="記事のカテゴリ">
+            {% for category in categories %}
+              <li><a href="{{ category | categoryUrl }}">{{ category }}</a></li>
+            {% endfor %}
           </ul>
         {% endif %}
       </div>
