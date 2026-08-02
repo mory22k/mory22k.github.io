@@ -703,7 +703,7 @@ strong {
 }
 
 .post-content {
-  text-shadow: 0 0 0.2px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 0 0.4px #000;
   padding-block: clamp(48px, 8vw, 84px);
   font-family: var(--font-serif);
   font-size: clamp(1rem, 1.5vw, 1.08rem);
