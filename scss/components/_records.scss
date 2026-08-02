@@ -14,36 +14,21 @@
     border-top: 1px solid var(--color-line);
   }
 
-  time {
-    color: var(--color-accent);
+  time,
+  .date-range {
+    color: var(--color-muted);
     font-family: var(--font-mono);
     font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .date-range time {
+    color: inherit;
+    font-size: inherit;
   }
 
   p {
     margin: 0;
-  }
-}
-
-.publication-list {
-  counter-reset: publication;
-
-  li {
-    position: relative;
-    padding-right: 48px;
-    counter-increment: publication;
-
-    &::after {
-      content: counter(publication, decimal-leading-zero);
-      position: absolute;
-      top: 20px;
-      right: 0;
-      color: var(--color-muted);
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-    }
   }
 }
 

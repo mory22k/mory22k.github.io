@@ -1,7 +1,7 @@
     <header class="site-header">
-      <a class="brand" href="{{ rootPath }}" aria-label="Personal Website of Keisuke Morita">
-        <span class="brand-mark" aria-hidden="true">KM</span>
-        <span>KM Personal Website</span>
+      <a class="brand" href="{{ rootPath }}" aria-label="森田圭祐 ホーム">
+        <span>森田 圭祐</span>
+        <span class="brand-name-en">Keisuke Morita</span>
       </a>
 
       <button
@@ -17,6 +17,6 @@
         <a href="{{ rootPath }}"{% if currentPage == "home" %} aria-current="page"{% endif %}>ホーム</a>
         <a href="{{ rootPath }}profile/"{% if currentPage == "profile" %} aria-current="page"{% endif %}>プロフィール</a>
         <a href="{{ rootPath }}publications/"{% if currentPage == "publications" %} aria-current="page"{% endif %}>研究業績</a>
-        <a href="{{ rootPath }}blog/"{% if currentPage == "blog" %} aria-current="page"{% endif %}>記事置き場</a>
+        <a href="{{ rootPath }}blog/"{% if currentPage == "blog" %} aria-current="page"{% endif %}>メモ帳</a>
       </nav>
     </header>

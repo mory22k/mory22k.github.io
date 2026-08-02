@@ -12,16 +12,10 @@ eleventyComputed:
 ---
 
 <main id="top">
-  <header class="page-header blog-page-header">
-    <p class="eyebrow">CATEGORY</p>
-    <h1>{{ category.name }}</h1>
-    <p>「{{ category.name }}」カテゴリの記事一覧です。</p>
-  </header>
-
   <section class="blog-index" aria-labelledby="articles-title">
     <div class="blog-index-heading">
       <p class="section-index">{{ category.posts.length }} ARTICLES</p>
-      <h2 id="articles-title">記事一覧</h2>
+      <h2 id="articles-title">{{ category.name }}の記事一覧</h2>
     </div>
 
     <nav class="category-navigation" aria-label="カテゴリ別の記事一覧">
@@ -49,7 +43,7 @@ eleventyComputed:
             <div class="blog-card-meta">
               <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
               {% if post.data.categories %}
-                <ul class="category-tags" aria-label="記事のカテゴリ">
+                <ul class="category-tags" aria-label="メモのカテゴリ">
                   {% for postCategory in post.data.categories %}
                     <li><a href="{{ postCategory | categoryUrl }}">{{ postCategory }}</a></li>
                   {% endfor %}
@@ -58,7 +52,6 @@ eleventyComputed:
             </div>
             <h3><a href="{{ post.url }}">{{ post.data.postTitle }}</a></h3>
             {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
-            <a class="blog-card-link" href="{{ post.url }}" aria-label="「{{ post.data.postTitle }}」を読む">記事を読む <span aria-hidden="true">→</span></a>
           </article>
         </li>
       {% endfor %}

@@ -4,9 +4,9 @@
   width: min(calc(100% - 40px), var(--content-width));
   display: grid;
   grid-template-columns: minmax(150px, 0.5fr) minmax(0, 1.5fr);
-  gap: clamp(40px, 8vw, 110px);
+  gap: clamp(40px, 7vw, 90px);
   margin-inline: auto;
-  padding-block: 100px;
+  padding-block: 76px;
   border-top: 1px solid var(--color-line);
   scroll-margin-top: 20px;
 }
@@ -90,13 +90,13 @@
 
 .detail-section,
 .publication-section {
-  padding-block: 74px;
+  padding-block: 60px;
 }
 
 .publication-section {
   grid-template-columns: 1fr;
   gap: 24px;
-  padding-block: 44px;
+  padding-block: 40px;
 
   .section-heading h2 {
     font-size: clamp(1.5rem, 2.5vw, 2.2rem);

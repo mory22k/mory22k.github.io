@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -25,12 +24,12 @@ a {
 }
 
 :root {
-  --color-ink: #17211b;
-  --color-paper: #f4f1e8;
-  --color-accent: #e95d3c;
-  --color-green: #244b38;
-  --color-line: rgba(23, 33, 27, 0.2);
-  --color-muted: rgba(23, 33, 27, 0.55);
+  --color-ink: #20242a;
+  --color-paper: #ffffff;
+  --color-accent: #315f7d;
+  --color-green: #315f7d;
+  --color-line: rgba(32, 36, 42, 0.18);
+  --color-muted: rgba(32, 36, 42, 0.62);
   --content-width: 1120px;
   --font-sans: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
   --font-serif: "Yu Mincho", "Hiragino Mincho ProN", serif;
@@ -46,16 +45,16 @@ body {
 
 h1 {
   max-width: 900px;
-  margin-bottom: 30px;
-  font-size: clamp(3rem, 8vw, 7rem);
-  line-height: 1.12;
-  letter-spacing: -0.055em;
+  margin-bottom: 24px;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
 }
 
 h2 {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(1.8rem, 4vw, 3rem);
   line-height: 1.25;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.02em;
 }
 
 h3 {
@@ -136,34 +135,22 @@ strong {
   border-top: 1px solid var(--color-line);
 }
 .record-list time,
-.publication-list time {
-  color: var(--color-accent);
+.record-list .date-range,
+.publication-list time,
+.publication-list .date-range {
+  color: var(--color-muted);
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+.record-list .date-range time,
+.publication-list .date-range time {
+  color: inherit;
+  font-size: inherit;
 }
 .record-list p,
 .publication-list p {
   margin: 0;
-}
-
-.publication-list {
-  counter-reset: publication;
-}
-.publication-list li {
-  position: relative;
-  padding-right: 48px;
-  counter-increment: publication;
-}
-.publication-list li::after {
-  content: counter(publication, decimal-leading-zero);
-  position: absolute;
-  top: 20px;
-  right: 0;
-  color: var(--color-muted);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
 }
 
 @media (max-width: 720px) {
@@ -185,23 +172,18 @@ strong {
 
 .brand {
   display: inline-flex;
-  gap: 12px;
-  align-items: center;
+  gap: 10px;
+  align-items: baseline;
   color: inherit;
   font-weight: 700;
   text-decoration: none;
 }
 
-.brand-mark {
-  width: 38px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  color: var(--color-paper);
-  background: var(--color-ink);
-  border-radius: 50%;
-  font-size: 0.68rem;
-  letter-spacing: 0.04em;
+.brand-name-en {
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .site-navigation {
@@ -225,7 +207,7 @@ strong {
   color: inherit;
   background: transparent;
   border: 1px solid var(--color-line);
-  border-radius: 999px;
+  border-radius: 3px;
   font: inherit;
 }
 
@@ -236,6 +218,9 @@ strong {
   }
   .menu-button {
     display: block;
+  }
+  .brand-name-en {
+    display: none;
   }
   .site-navigation {
     display: none;
@@ -249,8 +234,8 @@ strong {
     padding: 10px;
     background: var(--color-paper);
     border: 1px solid var(--color-line);
-    border-radius: 12px;
-    box-shadow: 0 16px 40px rgba(23, 33, 27, 0.12);
+    border-radius: 3px;
+    box-shadow: 0 8px 18px rgba(32, 36, 42, 0.1);
   }
   .site-navigation.is-open {
     display: flex;
@@ -265,12 +250,11 @@ strong {
 }
 
 .researcher-hero {
-  min-height: min(720px, 100vh - 88px);
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
-  gap: clamp(48px, 8vw, 110px);
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: clamp(48px, 7vw, 90px);
   align-items: start;
-  padding-block: 90px;
+  padding-block: clamp(64px, 9vw, 100px);
 }
 
 .hero-main h1 {
@@ -297,10 +281,6 @@ strong {
 
 .researcher-summary {
   margin: 0;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid var(--color-line);
-  border-radius: 18px;
 }
 .researcher-summary div + div {
   margin-top: 22px;
@@ -310,11 +290,8 @@ strong {
 .researcher-summary dt {
   margin-bottom: 6px;
   color: var(--color-accent);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
 }
 .researcher-summary dd {
   margin: 0;
@@ -343,30 +320,9 @@ strong {
 }
 .profile-links a {
   color: var(--color-ink);
-  font-family: var(--font-mono);
   font-size: 0.82rem;
-  font-weight: 700;
-  text-underline-offset: 0.25em;
-}
-.profile-links a::after {
-  content: " ↗";
-  color: var(--color-accent);
-}
-
-.page-header {
-  width: min(100% - 40px, var(--content-width));
-  margin-inline: auto;
-  padding-block: clamp(90px, 13vw, 170px) clamp(70px, 10vw, 130px);
-}
-.page-header h1 {
-  margin-bottom: 18px;
-  font-family: var(--font-sans);
   font-weight: 600;
-}
-.page-header > p:last-child {
-  max-width: 640px;
-  margin-bottom: 0;
-  font-size: 1.05rem;
+  text-underline-offset: 0.25em;
 }
 
 @media (max-width: 720px) {
@@ -376,17 +332,14 @@ strong {
     gap: 50px;
     padding-block: 72px;
   }
-  .researcher-summary {
-    padding: 24px;
-  }
 }
 .section {
   width: min(100% - 40px, var(--content-width));
   display: grid;
   grid-template-columns: minmax(150px, 0.5fr) minmax(0, 1.5fr);
-  gap: clamp(40px, 8vw, 110px);
+  gap: clamp(40px, 7vw, 90px);
   margin-inline: auto;
-  padding-block: 100px;
+  padding-block: 76px;
   border-top: 1px solid var(--color-line);
   scroll-margin-top: 20px;
 }
@@ -460,13 +413,13 @@ strong {
 
 .detail-section,
 .publication-section {
-  padding-block: 74px;
+  padding-block: 60px;
 }
 
 .publication-section {
   grid-template-columns: 1fr;
   gap: 24px;
-  padding-block: 44px;
+  padding-block: 40px;
 }
 .publication-section .section-heading h2 {
   font-size: clamp(1.5rem, 2.5vw, 2.2rem);
@@ -499,13 +452,10 @@ strong {
     gap: 4px;
   }
 }
-.blog-page-header {
-  padding-bottom: clamp(64px, 8vw, 100px);
-}
-
 .blog-index {
   width: min(100% - 40px, var(--content-width));
   margin-inline: auto;
+  padding-top: 32px;
   padding-bottom: 100px;
 }
 
@@ -539,8 +489,8 @@ strong {
 
 .blog-card {
   display: grid;
-  grid-template-columns: minmax(130px, 0.38fr) minmax(0, 1.62fr) auto;
-  grid-template-areas: "meta title link" "meta description link";
+  grid-template-columns: minmax(130px, 0.38fr) minmax(0, 1.62fr);
+  grid-template-areas: "meta title" "meta description";
   gap: 8px clamp(28px, 5vw, 72px);
   align-items: center;
   padding-block: clamp(32px, 5vw, 54px);
@@ -637,23 +587,6 @@ strong {
   font-size: 0.72rem;
 }
 
-.blog-card-link {
-  grid-area: link;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.blog-card-link span {
-  display: inline-block;
-  margin-left: 6px;
-  color: var(--color-accent);
-  transition: transform 160ms ease;
-}
-.blog-card-link:hover span {
-  transform: translateX(4px);
-}
-
 .blog-empty {
   padding-block: 48px;
   border-bottom: 1px solid var(--color-line);
@@ -667,20 +600,19 @@ strong {
 }
 
 .post-header {
-  padding-bottom: clamp(42px, 7vw, 72px);
-  border-bottom: 1px solid var(--color-line);
+  padding-bottom: clamp(24px, 4vw, 36px);
 }
 .post-header h1 {
   margin-bottom: 28px;
   font-family: var(--font-sans);
-  font-size: clamp(2.5rem, 6.5vw, 5.4rem);
-  font-weight: 600;
-}
-.post-header .eyebrow {
-  margin-top: 56px;
+  font-size: clamp(1.9rem, 4.5vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1.35;
 }
 
 .post-back-link {
+  display: inline-block;
+  margin-bottom: 36px;
   color: var(--color-muted);
   font-size: 0.85rem;
   font-weight: 700;
@@ -704,10 +636,14 @@ strong {
 
 .post-content {
   text-shadow: 0 0 0.4px #000;
-  padding-block: clamp(48px, 8vw, 84px);
+  padding: clamp(24px, 4vw, 40px) 0 clamp(48px, 8vw, 84px);
   font-family: var(--font-serif);
   font-size: clamp(1rem, 1.5vw, 1.08rem);
   line-height: 2;
+}
+.post-content strong {
+  font-family: var(--font-sans);
+  font-weight: 600;
 }
 .post-content > * {
   max-width: 52rem;
@@ -839,11 +775,8 @@ strong {
   }
   .blog-card {
     grid-template-columns: 1fr;
-    grid-template-areas: "meta meta" "title title" "description description" "link link";
+    grid-template-areas: "meta" "title" "description";
     gap: 12px;
-  }
-  .blog-card-link {
-    margin-top: 6px;
   }
   .post-meta {
     align-items: flex-start;
@@ -852,8 +785,7 @@ strong {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .blog-card h3 a,
-  .blog-card-link span {
+  .blog-card h3 a {
     transition: none;
   }
 }
