@@ -30,6 +30,27 @@
   p {
     margin: 0;
   }
+
+  .publication-details {
+    display: grid;
+    gap: 4px;
+    line-height: 1.4;
+  }
+
+  .publication-details h3 {
+    margin: 0;
+    font-size: 1.08rem;
+    font-weight: 700;
+  }
+
+  .publication-authors {
+    font-size: 0.9rem;
+  }
+
+  .publication-venue {
+    color: var(--color-muted);
+    font-size: 0.7rem;
+  }
 }
 
 @include tokens.mobile {

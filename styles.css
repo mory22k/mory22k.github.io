@@ -152,6 +152,27 @@ strong {
 .publication-list p {
   margin: 0;
 }
+.record-list .publication-details,
+.publication-list .publication-details {
+  display: grid;
+  gap: 4px;
+  line-height: 1.4;
+}
+.record-list .publication-details h3,
+.publication-list .publication-details h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+.record-list .publication-authors,
+.publication-list .publication-authors {
+  font-size: 0.9rem;
+}
+.record-list .publication-venue,
+.publication-list .publication-venue {
+  color: var(--color-muted);
+  font-size: 0.7rem;
+}
 
 @media (max-width: 720px) {
   .record-list li,
