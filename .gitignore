@@ -8,7 +8,7 @@ local/
 # Ignore the Gemfile that is generated
 Gemfile.lock
 
-# Ignore files created by npm
+# Ignore installed Node.js packages
 node_modules
 
 # Ignore the vendor file at root level and bundle for alternative installation

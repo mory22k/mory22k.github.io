@@ -1,19 +1,20 @@
 [tools]
-node = "latest"
+node = "22"
+pnpm = "11.22.0"
 rust = "latest"
 
 [tasks.setup]
 description = "開発用パッケージをインストールする"
-run = "npm install"
+run = "pnpm install"
 
 [tasks.build]
 description = "公開用サイトを_siteディレクトリへ生成する"
-run = "npm run build"
+run = "pnpm run build"
 
 [tasks.watch]
 description = "サイトとSCSSの変更を監視する"
-run = "npm run dev"
+run = "pnpm run dev"
 
 [tasks.serve]
 description = "ローカル確認用サーバーを起動して変更を監視する"
-run = "npm run dev"
+run = "pnpm run dev"

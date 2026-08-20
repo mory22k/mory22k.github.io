@@ -1,4 +1,5 @@
 import markdownIt from "markdown-it";
+import markdownItFootnote from "markdown-it-footnote";
 
 const categorySlugOverrides = new Map([
   ["お知らせ", "news"],
@@ -257,6 +258,103 @@ function preserveLatexNegativeSpace(md) {
   });
 }
 
+function headingSlug(text) {
+  return (
+    text
+      .normalize("NFKC")
+      .toLocaleLowerCase("ja-JP")
+      .replace(/[^\p{Letter}\p{Number}]+/gu, "-")
+      .replace(/^-+|-+$/g, "") || "section"
+  );
+}
+
+function renderArticleWithToc(html, md) {
+  const headings = [];
+  const usedIds = new Set();
+  const headingPattern = /<h([23])([^>]*)>([\s\S]*?)<\/h\1>/gi;
+
+  const contentWithHeadingIds = html.replace(
+    headingPattern,
+    (heading, level, attributes, headingHtml) => {
+      const text = md.utils.unescapeAll(headingHtml.replace(/<[^>]*>/g, ""));
+      const existingId = attributes.match(/\sid=(['"])(.*?)\1/i)?.[2];
+      const baseId = existingId || headingSlug(text);
+      let id = baseId;
+      let duplicateIndex = 2;
+
+      while (usedIds.has(id)) {
+        id = `${baseId}-${duplicateIndex}`;
+        duplicateIndex += 1;
+      }
+
+      usedIds.add(id);
+      headings.push({ level: Number(level), id, text });
+
+      if (existingId) {
+        if (id === existingId) {
+          return heading;
+        }
+
+        const uniqueAttributes = attributes.replace(
+          /(\sid=)(['"])(.*?)\2/i,
+          `$1$2${md.utils.escapeHtml(id)}$2`,
+        );
+        return `<h${level}${uniqueAttributes}>${headingHtml}</h${level}>`;
+      }
+
+      return `<h${level}${attributes} id="${md.utils.escapeHtml(id)}">${headingHtml}</h${level}>`;
+    },
+  );
+
+  const sections = [];
+
+  for (const heading of headings) {
+    if (heading.level === 2) {
+      sections.push({ ...heading, children: [] });
+    } else if (sections.length > 0) {
+      sections.at(-1).children.push(heading);
+    }
+  }
+
+  if (sections.length === 0) {
+    return contentWithHeadingIds;
+  }
+
+  const tocItems = sections
+    .map((section) => {
+      const children = section.children.length
+        ? `<ol>${section.children
+            .map(
+              (child) =>
+                `<li><a href="#${encodeURIComponent(child.id)}">${md.utils.escapeHtml(child.text)}</a></li>`,
+            )
+            .join("")}</ol>`
+        : "";
+
+      return `<li><a href="#${encodeURIComponent(section.id)}">${md.utils.escapeHtml(section.text)}</a>${children}</li>`;
+    })
+    .join("");
+
+  const toc = `<nav class="post-toc" aria-labelledby="post-toc-title">
+  <p class="post-toc-title" id="post-toc-title">目次</p>
+  <ol>${tocItems}</ol>
+</nav>`;
+
+  return `${toc}\n${contentWithHeadingIds}`;
+}
+
+export function createMarkdownLibrary() {
+  return markdownIt({
+    html: true,
+    linkify: true,
+    typographer: false,
+  })
+    .use(preserveLatexMath)
+    .use(renderArticleFigures)
+    .use(preserveLatexNegativeSpace)
+    .use(markdownItFootnote);
+}
+
 export default function (eleventyConfig) {
   const dateFormatter = new Intl.DateTimeFormat("ja-JP", {
     year: "numeric",
@@ -287,16 +385,12 @@ export default function (eleventyConfig) {
     (category) => `/blog/categories/${categorySlug(category)}/`,
   );
 
-  const markdownLibrary = markdownIt({
-    html: true,
-    linkify: true,
-    typographer: false,
-  })
-    .use(preserveLatexMath)
-    .use(renderArticleFigures)
-    .use(preserveLatexNegativeSpace);
+  const markdownLibrary = createMarkdownLibrary();
 
   eleventyConfig.setLibrary("md", markdownLibrary);
+  eleventyConfig.addFilter("articleWithToc", (html) =>
+    renderArticleWithToc(html, markdownLibrary),
+  );
 
   eleventyConfig.addCollection("blogPosts", getBlogPosts);
 
