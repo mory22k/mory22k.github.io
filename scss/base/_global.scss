@@ -57,9 +57,3 @@ strong {
   font-family: var(--font-mono);
   font-size: 0.75rem;
 }
-
-@include tokens.reduced-motion {
-  html {
-    scroll-behavior: auto;
-  }
-}
