@@ -344,7 +344,7 @@ function renderArticleWithToc(html, md) {
 }
 
 export function createMarkdownLibrary() {
-  return markdownIt({
+  const md = markdownIt({
     html: true,
     linkify: true,
     typographer: false,
@@ -353,6 +353,13 @@ export function createMarkdownLibrary() {
     .use(renderArticleFigures)
     .use(preserveLatexNegativeSpace)
     .use(markdownItFootnote);
+
+  // Repeated references need unique element IDs, but their visible citation
+  // number should remain the same (for example, "[1]" instead of "[1:1]").
+  md.renderer.rules.footnote_caption = (tokens, index) =>
+    `[${Number(tokens[index].meta.id) + 1}]`;
+
+  return md;
 }
 
 export default function (eleventyConfig) {

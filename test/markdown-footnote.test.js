@@ -31,4 +31,6 @@ test("supports repeated references to the same footnote", () => {
   assert.match(rendered, /id="fnref1"/);
   assert.match(rendered, /id="fnref1:1"/);
   assert.match(rendered, /href="#fnref1:1"/);
+  assert.equal(rendered.match(/>\[1\]<\/a>/g)?.length, 2);
+  assert.doesNotMatch(rendered, /\[1:1\]/);
 });
