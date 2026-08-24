@@ -22,7 +22,7 @@ currentPage: blog
     </header>
 
     <div class="post-content">
-      {{ content | safe }}
+      {{ content | articleWithToc | safe }}
     </div>
 
     <footer class="post-footer">
