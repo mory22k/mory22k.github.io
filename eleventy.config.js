@@ -425,7 +425,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "assets": "assets" });
   eleventyConfig.addPassthroughCopy(
-    "src/blog/posts/**/*.{avif,gif,jpeg,jpg,png,svg,webp}",
+    "src/blog/posts/**/*.{avif,gif,jpeg,jpg,pdf,png,svg,webp}",
     { mode: "html-relative" },
   );
   eleventyConfig.addPassthroughCopy("script.js");
