@@ -4,7 +4,7 @@
   width: min(calc(100% - 40px), var(--content-width));
   display: grid;
   grid-template-columns: minmax(150px, 0.5fr) minmax(0, 1.5fr);
-  gap: clamp(40px, 7vw, 90px);
+  gap: clamp(20px, 7vw, 60px);
   margin-inline: auto;
   padding-block: 76px;
   border-top: 1px solid var(--color-line);
@@ -15,7 +15,7 @@
   h2 {
     margin-bottom: 0;
     font-family: var(--font-sans);
-    font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+    font-size: clamp(1.8rem, 3.5vw, 2rem);
     font-weight: 600;
   }
 }
