@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@11.22.0",
+  "packageManager": "pnpm@12.21.0",
   "scripts": {
     "build": "pnpm run build:styles && eleventy",
     "build:styles": "sass scss/styles.scss styles.css --style=expanded --no-source-map",
@@ -11,10 +11,10 @@
     "test": "node --test"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6",
-    "concurrently": "^9.2.1",
-    "markdown-it": "^14.3.0",
+    "@11ty/eleventy": "^3.1.8",
+    "concurrently": "^10.0.7",
+    "markdown-it": "^15.0.3",
     "markdown-it-footnote": "^4.0.0",
-    "sass": "^1.101.0"
+    "sass": "^1.108.2"
   }
 }
